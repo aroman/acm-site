@@ -5,7 +5,10 @@
      <td><%= link_to('about', about_path) %></td>
      <td><%= link_to('contact', contact_path) %></td>
      <td><%= link_to('articles', articles_path) %></td>
-     <td><%= link_to('members', members_path) %></td>
+     <% if logged_in? %>
+       <td><%= link_to('members', members_path) %></td>
+     <% end %>
+     <td><%= if logged_in? then link_to('logout', logout_path) else link_to('login', login_path) end%></td>
     </tr>
   </table>
 </div>
