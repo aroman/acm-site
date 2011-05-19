@@ -1,0 +1,15 @@
+one:
+  date: 2011-05-19
+  issue: MyString
+  volume: 1
+  link: MyString
+  image: MyString
+  description: MyText
+
+two:
+  date: 2011-05-19
+  issue: MyString
+  volume: 1
+  link: MyString
+  image: MyString
+  description: MyText

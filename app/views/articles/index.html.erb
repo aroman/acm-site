@@ -1,0 +1,27 @@
+<% title "Articles" %>
+
+<table>
+  <tr>
+    <th>Date</th>
+    <th>Issue</th>
+    <th>Volume</th>
+    <th>Link</th>
+    <th>Image</th>
+    <th>Description</th>
+  </tr>
+  <% for article in @articles %>
+    <tr>
+      <td><%= article.date %></td>
+      <td><%= article.issue %></td>
+      <td><%= article.volume %></td>
+      <td><%= article.link %></td>
+      <td><%= article.image %></td>
+      <td><%= article.description %></td>
+      <td><%= link_to "Show", article %></td>
+      <td><%= link_to "Edit", edit_article_path(article) %></td>
+      <td><%= link_to "Destroy", article, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Article", new_article_path %></p>
