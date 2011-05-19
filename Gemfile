@@ -8,3 +8,4 @@ gem 'rails', '3.0.7'
 gem 'sqlite3'
 gem 'nifty-generators'
 gem "mocha", :group => :test
+gem "bcrypt-ruby", :require => "bcrypt"
