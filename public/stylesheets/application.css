@@ -90,7 +90,7 @@ p {
 
 #navigation td { 
   height: 22px;
-  width: 60px;
+  min-width: 60px;
   text-align: center;
 }
 
