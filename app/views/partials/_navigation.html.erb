@@ -10,6 +10,7 @@
      <td><%= link_to('who drives acm', board_path) %></td>
      <% if logged_in? %>
        <td><%= link_to('members', members_path) %></td>
+       <td><%= link_to('edit account', edit_user_path(current_user)) %></td>
      <% end %>
      <td><%= if logged_in? then link_to('logout', logout_path) else link_to('login', login_path) end%></td>
     </tr>

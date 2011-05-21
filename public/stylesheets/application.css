@@ -132,7 +132,8 @@ p {
 
 #flash_notice, #flash_error, #flash_alert {
   padding: 5px 8px;
-  margin: 10px 0;
+  margin: 10px auto auto auto;
+  width: 85%;
 }
 
 #flash_notice {

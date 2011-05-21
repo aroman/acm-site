@@ -1,4 +1,7 @@
 class MembersController < ApplicationController
+  before_filter :login_required, :except => [:rsvp, :update, :edit]
+
+
   def index
     @members = Member.all
   end
