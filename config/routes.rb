@@ -23,4 +23,5 @@ Acm::Application.routes.draw do
   match 'about' => 'home#about', :as => :about
   match 'contact' => 'home#contact', :as => :contact
   match 'board' => 'home#board', :as => :board
+  match 'partners' => 'home#partners', :as => :partners
 end
