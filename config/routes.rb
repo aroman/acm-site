@@ -1,4 +1,6 @@
 Acm::Application.routes.draw do
+  resources :apps
+
   match 'user/edit' => 'users#edit', :as => :edit_current_user
 
   match 'signup' => 'users#new', :as => :signup
@@ -20,7 +22,6 @@ Acm::Application.routes.draw do
   match 'home' => 'home#index', :as => :home
   match 'about' => 'home#about', :as => :about
   match 'contact' => 'home#contact', :as => :contact
-
 
 
 end
