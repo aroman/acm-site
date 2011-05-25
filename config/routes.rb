@@ -1,6 +1,4 @@
 Acm::Application.routes.draw do
-  resources :apps
-
   match 'user/edit' => 'users#edit', :as => :edit_current_user
 
  # removed so users cannot signup to the site
@@ -25,4 +23,5 @@ Acm::Application.routes.draw do
   match 'contact' => 'home#contact', :as => :contact
   match 'board' => 'home#board', :as => :board
   match 'partners' => 'home#partners', :as => :partners
+  match 'apps' => 'home#apps', :as => :apps
 end
