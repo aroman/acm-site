@@ -1,11 +1,13 @@
-<div id = "header">
+<div id="header">
+  <h1><span class="acm">ACM</span>@CMU</h1>
+  <span id="tagline">association for computing machinery at carnegie mellon university</span>
+  <h2>Working on the design! Chill your balls.</h2>
+  <!--
+  <%=image_tag("acm-logo.jpg", :size => "75x75")%><
+  -->
+  <% flash.each do |name, msg| %>
+    <%= content_tag :div, msg, :id => "flash_#{name}" %>
+  <% end %>
 
-  <table style="height: 59px;">
-    <tr>
-      <td id = "header_logo"> <a style="color: #7AE969" href="<%=home_path%>">ACM</a><%=link_to('@CMU',home_path) %></td>
-      <td id = "header_tagline">association for computing machinery at carnegie mellon university</td>
-      <td style="padding-left: 100px;"><%=image_tag("acm-logo.jpg", :size => "75x75")%></td>
-    </tr>
-  </table>
-
+  <%= render :partial => 'partials/navigation' %>
 </div>
