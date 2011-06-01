@@ -1,20 +1,8 @@
-
-<!-- authentication module -->
-<div id="auth">
-  <% if logged_in? %>
-    <%= link_to('members', members_path) %>
-    <%= link_to('edit account', edit_user_path(current_user)) %>
-    <%= link_to('logout', logout_path) %>
-  <% else %>
-    <%= link_to('login', login_path) %>
-  <% end %>
-  <a id="l-close" href="#">close</a>
-</div>
- 
+<%= render :partial => 'partials/auth' %>
 <div id="header">
   <div class="container">
     <div id="logo">
-      <a href="/index.html"><%= image_tag "title.png", :id => 'title', :alt => 'acm@cmu' %></a><br />
+      <a href="/home"><%= image_tag "title.png", :id => 'title', :alt => 'acm@cmu' %></a><br />
       <span id="tagline">association for computing machinery at carnegie mellon university</span>
     </div>
     <% flash.each do |name, msg| %>
