@@ -5,12 +5,12 @@
 
 @font-face {
 	font-family: Aller;
-	src: url("Aller_Lt.eot") /* EOT file for IE */
+	src: url("/images/Aller_Lt.eot") /* EOT file for IE */
 }
 
 @font-face {
 	font-family: Aller;
-	src: url("Aller_Lt.ttf") /* TTF file for CSS3 browsers */
+	src: url("/images/Aller_Lt.ttf") /* TTF file for CSS3 browsers */
 }
 
 body {
