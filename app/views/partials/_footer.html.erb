@@ -1,14 +1,14 @@
 <div id="footer">
-  <div id="auth">
-  <% if logged_in? %>
-    <%= link_to('members', members_path) %>
-    <%= link_to('edit account', edit_user_path(current_user)) %>
-    <%= link_to('logout', logout_path) %>
-  <% else %>
-    <%= link_to('login', login_path) %>
-  <% end %>
+  <div class="container">
+    <%= image_tag "html5-color.png", :alt => 'HTML5+CSS3' %>
+    <a href="http://www.acm.org/">
+      <%= image_tag "acm-color.png", :alt => 'Association for Computing Machinery' %>
+    </a>
+    <a href="http://www.cmu.edu/">
+      <%= image_tag "cmu-color.png", :alt => 'Carnegie Mellon University' %>
+    </a>
+    <span id="copyright">
+      &copy; <%= Time.now.year %> acm@cmu
+    </span>
   </div>
-  <div id="copyright">
-    ACM@CMU <%= Time.now.year %>&copy;
-  <div>
 </div>

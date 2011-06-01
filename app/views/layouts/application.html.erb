@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>ACM@CMU :: <%= if @title.nil? then (content_for?(:title) ? yield(:title) : "ACM@CMU") else @title end %></title>
-    <%= stylesheet_link_tag "application" %>
-    <%= javascript_include_tag :defaults %>
-    <%= csrf_meta_tag %>
-    <%= yield(:head) %>
-  </head>
-  <body>
-    <%= render :partial => 'partials/header' %>
-    <div id="container">
-      <%= content_tag :h1, yield(:title) if show_title? %>
-      <%= yield %>
-    </div>
-    <%= render :partial => 'partials/footer' %>
-  </body>
+<head>
+<title>ACM@CMU :: <%= if @title.nil? then (content_for?(:title) ? yield(:title) : "ACM@CMU") else @title end %></title>
+<%= stylesheet_link_tag "application" %>
+<%= stylesheet_link_tag "style" %>
+<%= javascript_include_tag :defaults %>
+<%= csrf_meta_tag %>
+<%= yield(:head) %>
+</head>
+<body>
+<%= render :partial => 'partials/header' %>
+<div id="content">  
+  <div class="container">
+    <%= content_tag :h1, yield(:title) if show_title? %>
+    <%= yield %>
+  </div>
+</div>
+<%= render :partial => 'partials/footer' %>
+</body>
 </html>

@@ -1,0 +1,184 @@
+/*****************
+ * Basic CSS
+ *****************
+ */
+
+@font-face {
+	font-family: Aller;
+	src: url("Aller_Lt.eot") /* EOT file for IE */
+}
+
+@font-face {
+	font-family: Aller;
+	src: url("Aller_Lt.ttf") /* TTF file for CSS3 browsers */
+}
+
+body {
+  font-family:Aller, Helvetica, Arial, sans-serif;
+}
+
+a {
+  text-decoration:none;
+}
+
+a:hover {
+
+}
+
+h1 {
+  font-size:2em;
+  text-align:center;
+  line-height:1.5em;
+  padding:2em 0;
+}
+
+/*****************
+ * Navigation CSS
+ *****************
+ */
+
+ul#nav {
+  position:absolute;
+  top:50px; right:50px; /*left:500px;*/
+  margin:auto;
+  padding:20px 0 0;
+  height:20px;
+}
+ 
+ul#nav li {
+  display:inline;
+  width:20px;
+}
+
+ul#nav li a {
+  padding:4px 8px;
+  margin:6px;
+  font-size:0.8em;
+  color:#000;
+  text-shadow: 0 1px 0 rgb(255,255,255);
+}
+
+ul#nav li.current a, ul#nav li a:hover {
+  color:#fff;
+  text-shadow: 0 1px 0 rgb(0,0,0);
+  background:#900;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+
+/*
+ul#nav li a { 
+  float:left;
+  margin-right:15px;
+  padding:25px 0 0 25px;
+  background:url('../nav.png') no-repeat;
+  width:0;
+  height:0;
+  overflow:hidden;
+  color:#000;
+  font-size:0.8em;
+  text-decoration:none;
+  text-align:center;
+}
+
+ul#nav li#home a { background-position:-10px -10px }
+ul#nav li#about a { background-position:-50px -10px }
+ul#nav li#apps a { background-position:-90px -10px }
+ul#nav li#articles a { background-position:-130px -10px; }
+ul#nav li#contact a { background-position:-170px -10px; }
+
+ul#nav li#home a:hover { background-position:-10px -40px }
+ul#nav li#about a:hover { background-position:-50px -40px }
+ul#nav li#apps a:hover { background-position:-90px -40px }
+ul#nav li#articles a:hover { background-position:-130px -40px }
+ul#nav li#contact a:hover { background-position:-170px -40px }
+*/
+
+/*****************
+ * Layout CSS
+ *****************
+ */
+
+.container {
+  position:relative;
+  margin:auto;
+  width:960px;
+}
+
+#auth {
+  position:relative;
+  background:#666;
+  display:none;
+  height:170px;
+  background:#666 url('/images/loginbg.gif') no-repeat left;
+}
+
+a#l-open, a#l-close {
+  position:absolute;
+  background:url('/images/nav.png');
+  width:40px;
+  height:0;
+  padding-top:20px;
+  overflow:hidden;
+}
+
+a#l-open {
+  top:0px;
+  right:20px;
+  background-position:-210px -10px;
+}
+
+a#l-close {
+  display:none;
+  bottom:0px;
+  right:20px;
+  background-position:-260px -10px;
+}
+
+a#l-open:hover { background-position:-210px -40px }
+a#l-close:hover { background-position:-260px -40px }
+
+#header {
+  background:#fff url('/images/headerbg.gif') repeat-x;
+  padding-bottom:30px;
+}
+
+#logo { display:inline; text-align:center; }
+#title { margin-top:40px }
+#tagline { 
+  position:relative;
+  top:-0.5em; left:5em;
+  font-family:Georgia, serif; 
+  font-style:italic;
+  font-size:0.7em;
+  text-shadow: 0 1px 0 rgb(255,255,255);
+}
+
+#content {
+  border:10px solid #900;
+  border-width:10px 0;
+  padding:40px 20px;
+}
+
+#footer {
+  background:#fff url('/images/footerbg.gif') repeat-x;
+}
+
+#footer .container { 
+  background:url('/images/dip.gif') top center no-repeat;
+  height:100px;
+  padding:10px;
+}
+
+#footer img {
+  float:left;
+  margin-right:10px;
+}
+
+#footer #copyright {
+  padding:10px 0;
+  float:right;
+  font-family:Georgia, serif;
+  font-size:0.7em;
+  text-shadow: 0 1px 0 rgb(255,255,255);
+}

@@ -1,13 +1,25 @@
-<div id="header">
-  <h1><span class="acm">ACM</span>@CMU</h1>
-  <span id="tagline">association for computing machinery at carnegie mellon university</span>
-  <h2>Working on the design! Chill your balls.</h2>
-  <!--
-  <%=image_tag("acm-logo.jpg", :size => "75x75")%><
-  -->
-  <% flash.each do |name, msg| %>
-    <%= content_tag :div, msg, :id => "flash_#{name}" %>
-  <% end %>
 
-  <%= render :partial => 'partials/navigation' %>
+<!-- authentication module -->
+<div id="auth">
+  <% if logged_in? %>
+    <%= link_to('members', members_path) %>
+    <%= link_to('edit account', edit_user_path(current_user)) %>
+    <%= link_to('logout', logout_path) %>
+  <% else %>
+    <%= link_to('login', login_path) %>
+  <% end %>
+  <a id="l-close" href="#">close</a>
+</div>
+ 
+<div id="header">
+  <div class="container">
+    <div id="logo">
+      <a href="/index.html"><%= image_tag "title.png", :id => 'title', :alt => 'acm@cmu' %></a><br />
+      <span id="tagline">association for computing machinery at carnegie mellon university</span>
+    </div>
+    <% flash.each do |name, msg| %>
+      <%= content_tag :div, msg, :id => "flash_#{name}" %>
+    <% end %>
+    <%= render :partial => 'partials/navigation' %>
+  </div>
 </div>
