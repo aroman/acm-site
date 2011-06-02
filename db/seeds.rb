@@ -8,7 +8,7 @@
 
 
 #Admin account
-  User.create(:username => 'admin', :email => 'admin@example.com', :password => 'secret', :role => 'administrator')
+  User.create(:username => 'admin', :email => 'admin@example.com', :password => 'secret', :role => 'Administrator')
 
 #User account
-  User.create(:username => 'user', :email => 'user@example.com', :password => 'secret', :role => 'user')
+  User.create(:username => 'user', :email => 'user@example.com', :password => 'secret', :role => 'User')

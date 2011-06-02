@@ -9,3 +9,4 @@ gem 'sqlite3'
 gem 'nifty-generators'
 gem "mocha", :group => :test
 gem "bcrypt-ruby", :require => "bcrypt"
+gem 'cancan'

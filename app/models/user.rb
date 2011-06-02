@@ -5,6 +5,12 @@ class User < ActiveRecord::Base
   attr_accessor :password
   ROLES = [['Administrator', :admin] ,['User', :user]]
 
+  def role?(authorized_role)
+    return false if role.nil?
+    role.to_sym == authorized_role
+  end
+
+
 
   before_save :prepare_password
 
