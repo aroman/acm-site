@@ -201,7 +201,8 @@ a#l-close:hover { background-position:-260px -40px }
 }
 
 #footer #copyright {
-  padding:10px 0;
+  color:#aaa;
+  padding:15px 0;
   float:right;
   font-family:Georgia, serif;
   font-size:0.7em;
