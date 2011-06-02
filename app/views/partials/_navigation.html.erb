@@ -1,18 +1,9 @@
-<div id = "navigation">
-  <table>
-    <tr>
-     <td><%= link_to('home', home_path) %></td>
-     <td><%= link_to('apps', apps_path) %></td>
-     <td><%= link_to('about', about_path) %></td>
-     <td><%= link_to('contact', contact_path) %></td>
-     <td><%= link_to('articles', articles_path) %></td>
-     <td><%= link_to('partners', partners_path) %></td>
-     <td><%= link_to('who drives acm', board_path) %></td>
-     <% if logged_in? %>
-       <td><%= link_to('members', members_path) %></td>
-       <td><%= link_to('edit account', edit_user_path(current_user)) %></td>
-     <% end %>
-     <td><%= if logged_in? then link_to('logout', logout_path) else link_to('login', login_path) end%></td>
-    </tr>
-  </table>
-</div>
+    <ul id = "nav">
+      <li id="home"><%= link_to('home', home_path) %></li>
+      <li id="about"><%= link_to('about', about_path) %></li>
+      <li id="apps"><%= link_to('apps', apps_path) %></li>
+      <li id="articles"><%= link_to('articles', articles_path) %></li>
+      <li id="contact"><%= link_to('contact', contact_path) %></li>
+      <!--<li><%= link_to('partners', partners_path) %></li>-->
+      <!--<li><%= link_to('board', board_path) %></li>-->
+    </div>

@@ -1,7 +1,14 @@
-<div id = "footer">
-  <table>
-    <tr>
-      <td>ACM@CMU <%=Time.now.year%>&copy</td>
-    </tr>
-  </table>
+<div id="footer">
+  <div class="container">
+    <%= image_tag "html5-color.png", :alt => 'HTML5+CSS3' %>
+    <a href="http://www.acm.org/">
+      <%= image_tag "acm-color.png", :alt => 'Association for Computing Machinery' %>
+    </a>
+    <a href="http://www.cmu.edu/">
+      <%= image_tag "cmu-color.png", :alt => 'Carnegie Mellon University' %>
+    </a>
+    <span id="copyright">
+      &copy; <%= Time.now.year %> acm@cmu
+    </span>
+  </div>
 </div>
