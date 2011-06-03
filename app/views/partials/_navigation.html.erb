@@ -1,9 +1,19 @@
+<% 
+nav_items = %w( home about apps articles contact )
+nav_paths = { 
+  'home' => home_path,
+  'about' => about_path,
+  'apps' => apps_path,
+  'articles' => articles_path,
+  'contact' => contact_path
+}
+%>    
     <ul id = "nav">
-      <li id="home"><%= link_to('home', home_path) %></li>
-      <li id="about"><%= link_to('about', about_path) %></li>
-      <li id="apps"><%= link_to('apps', apps_path) %></li>
-      <li id="articles"><%= link_to('articles', articles_path) %></li>
-      <li id="contact"><%= link_to('contact', contact_path) %></li>
-      <!--<li><%= link_to('partners', partners_path) %></li>-->
-      <!--<li><%= link_to('board', board_path) %></li>-->
-    </div>
+<% nav_items.each do |item| %>
+      <%= content_tag :li, 
+            link_to (item, nav_paths[item]), 
+            :id => item,
+            :class => (@title.downcase == item)? 'current' : ''
+       %>
+<% end %>
+    </ul>
