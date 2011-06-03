@@ -18,7 +18,7 @@ body {
 }
 
 p {
-  padding-bottom:1em;
+  padding-top:1em;
   font-size:1.2em;
   line-height:1.5em;
 }
@@ -36,7 +36,7 @@ h1 {
   font-family:Georgia, serif;
   font-size:3em;
   color:#900;
-  padding:0.5em 0 0.8em;
+
 }
 
 /*****************
@@ -172,7 +172,7 @@ a#l-close:hover { background-position:-260px -40px }
 }
 
 #main .container {
-  padding:1.2em 0 2em;
+  padding:3em 0 3em;
 }
 
 #sidebar {
