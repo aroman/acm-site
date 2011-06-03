@@ -36,7 +36,12 @@ h1 {
   font-family:Georgia, serif;
   font-size:3em;
   color:#900;
+}
 
+h2 {
+  font-size:2em;
+  font-style:italic;
+  margin:1em 0;
 }
 
 /*****************

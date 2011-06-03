@@ -4,15 +4,19 @@ class HomeController < ApplicationController
   end
 
   def about
-   @title = "About"
+   @title = "We R Who We R"
   end
 
-  def contact
-    @title = "Contact"
+  def we
+    @title = "What We Do"
   end
 
-  def apps
-    @title = "Apps"
+  def join
+    @title = "Eat Food"
+  end
+
+  def sponsor
+    @title = "Give Us Money"
   end
 end
 

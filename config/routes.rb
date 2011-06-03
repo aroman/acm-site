@@ -18,10 +18,15 @@ Acm::Application.routes.draw do
 
   root :to => 'home#index'
 
+# new tabs as per eric wu
   match 'home' => 'home#index', :as => :home
   match 'about' => 'home#about', :as => :about
-  match 'contact' => 'home#contact', :as => :contact
-  match 'board' => 'home#board', :as => :board
-  match 'partners' => 'home#partners', :as => :partners
-  match 'apps' => 'home#apps', :as => :apps
+  match 'we' => 'home#we', :as => :we
+  match 'join' => 'home#join', :as => :join
+  match 'sponsor' => 'home#sponsor', :as => :sponso
+
+#  match 'contact' => 'home#contact', :as => :contact
+#  match 'board' => 'home#board', :as => :board
+#  match 'partners' => 'home#partners', :as => :partners
+#  match 'apps' => 'home#apps', :as => :apps
 end
