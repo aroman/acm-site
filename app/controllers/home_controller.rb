@@ -1,7 +1,6 @@
 class HomeController < ApplicationController
   def index
     @title = "Home"
-
   end
 
   def about
@@ -12,6 +11,8 @@ class HomeController < ApplicationController
     @title = "Contact"
   end
 
-
+  def apps
+    @title = "Apps"
+  end
 end
 
