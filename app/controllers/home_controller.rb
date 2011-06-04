@@ -4,7 +4,7 @@ class HomeController < ApplicationController
   end
 
   def about
-   @title = "We R Who We R"
+   @title = "About"
   end
 
   def we
@@ -12,11 +12,11 @@ class HomeController < ApplicationController
   end
 
   def join
-    @title = "Eat Food"
+    @title = "Join"
   end
 
   def sponsor
-    @title = "Give Us Money"
+    @title = "Sponsor"
   end
 end
 
