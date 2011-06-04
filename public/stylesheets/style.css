@@ -41,7 +41,9 @@ h1 {
 h2 {
   font-size:2em;
   font-style:italic;
-  margin:1em 0;
+  margin:0.8em 0 1.3em;
+  padding-top:1em;
+  border-top:1px solid #900;
 }
 
 /*****************
@@ -78,34 +80,6 @@ ul#nav li.current a, ul#nav li a:hover {
   -moz-border-radius: 3px;
   border-radius: 3px;
 }
-
-/*
-ul#nav li a { 
-  float:left;
-  margin-right:15px;
-  padding:25px 0 0 25px;
-  background:url('../nav.png') no-repeat;
-  width:0;
-  height:0;
-  overflow:hidden;
-  color:#000;
-  font-size:0.8em;
-  text-decoration:none;
-  text-align:center;
-}
-
-ul#nav li#home a { background-position:-10px -10px }
-ul#nav li#about a { background-position:-50px -10px }
-ul#nav li#apps a { background-position:-90px -10px }
-ul#nav li#articles a { background-position:-130px -10px; }
-ul#nav li#contact a { background-position:-170px -10px; }
-
-ul#nav li#home a:hover { background-position:-10px -40px }
-ul#nav li#about a:hover { background-position:-50px -40px }
-ul#nav li#apps a:hover { background-position:-90px -40px }
-ul#nav li#articles a:hover { background-position:-130px -40px }
-ul#nav li#contact a:hover { background-position:-170px -40px }
-*/
 
 /*****************
  * Layout CSS
@@ -157,7 +131,9 @@ a#l-close:hover { background-position:-260px -40px }
 
 #header {
   background:#fff url('/images/headerbg.gif') repeat-x;
+  border-bottom:10px solid #900;
   padding-bottom:30px;
+  margin-bottom:3em;
 }
 
 #logo { display:inline; text-align:center; }
@@ -172,12 +148,7 @@ a#l-close:hover { background-position:-260px -40px }
 }
 
 #main {
-  border:10px solid #900;
   border-width:10px 0;
-}
-
-#main .container {
-  padding:3em 0 3em;
 }
 
 #sidebar {
@@ -191,7 +162,11 @@ a#l-close:hover { background-position:-260px -40px }
 }
 
 #footer {
+  position:relative;
+  top:3em;
+  clear:both;
   background:#fff url('/images/footerbg.gif') repeat-x;
+  border-top:10px solid #900;
 }
 
 #footer .container { 
@@ -212,4 +187,35 @@ a#l-close:hover { background-position:-260px -40px }
   font-family:Georgia, serif;
   font-size:0.7em;
   text-shadow: 0 1px 0 rgb(255,255,255);
+}
+
+/*******************
+ * About Page CSS
+ *******************
+ */
+
+dl#board {
+  margin:bottom:0.5em;
+}
+
+dl#board .profile {
+  display:inline;
+  float:left;
+  margin:0 0 30px 20px;
+  width:280px
+}
+
+dl#board .profile dt {
+  font-family:Georgia, serif;
+  font-size:0.8em;
+  margin-bottom:0.3em;
+}
+
+dl#board .profile dd {
+  color:#900;
+  font-size:1.2em;
+}
+
+dl#board .profile p {
+  font-size:0.8em;
 }
