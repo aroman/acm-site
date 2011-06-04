@@ -219,3 +219,13 @@ dl#board .profile dd {
 dl#board .profile p {
   font-size:0.8em;
 }
+
+/***********************
+ * Activities Page CSS
+ ***********************
+ */
+
+#we-jobs, #we-code, #we-projects, #we-journals {
+  display:none;
+}
+

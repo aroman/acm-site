@@ -1,12 +1,14 @@
 <!-- authentication module -->
-<div id="auth">
-  <% if logged_in? %>
+
+<% if logged_in? %>
     <%= link_to('members', members_path) %>
     <%= link_to('edit account', edit_user_path(current_user)) %>
     <%= link_to('logout', logout_path) %>
   <% else %>
-    <%= link_to('login', login_path) %>
-  <% end %>
+<div id="auth">
+  <%= link_to('login', login_path) %>
+  <!-- login form goes here -->
   <a id="l-close" href="#">close</a>
 </div>
-<a id="l-open" href="#">login</a>
+<%= link_to "login", "#", :id => "l-open" %>
+  <% end %>
