@@ -1,32 +1,61 @@
-<h1>This Is What We Do.</h1>
+<h1>What We Do</h1>
 
 <%
 # what we do page -
 # I want a 2x2 grid with these 4 things (arranged in no particular order) each box in this grid should link to a new page for each of these 4 items. I want to the url to be www.xxx.com/we/ for this base page and then subsequent pages will be on urs like www.xxx.com/we/get-jobs/, www.xxx.com/we/code/, www.xxx.com/we/make-projects-happen, www.xxx.com/we/publish-journals.
 %>
 <ul id="we-menu">
-<li><a href="#" id="link-jobs">get jobs</a></li>
-<li><a href="#" id="link-code">code</a></li>
-<li><a href="#" id="link-projects">make projects happen</a></li>
-<li><a href="#" id="link-journals">publish journals</a></li>
+<li><a href="#" id="link-jobs">Work</a></li>
+<li><a href="#" id="link-code">Play</a></li>
+<li><a href="#" id="link-projects">Develop</a></li>
+<li><a href="#" id="link-journals">Publish</a></li>
 </ul>
 <div id="we-jobs">
 <a href="#" class="we-back">back</a>
-Get Jobs, Internships and research opportunities
-ACM connects students to industry-leading experts and recruiters, as well as pioneering faculty and alumni.
+  <h2>Making it in the Real World</h2>
+  <p>
+ACM partners with employers to provide students networking and, ultimately, employment  opportunities. We host both large and small scale events that provide intimate access to highly  competitive and sought after employers. Types of past events that we've hosted include  information sessions, programming competitions and tech talks. ACM also hosts private  networking events with companies for active members. All our events are well stocked with  food. Check out a list of our partners below.
+  </p>
+  <p>
+  If you're interested in finding employment opportunities, <%=link_to("join ACM@CMU", join_path) %>.
+  </p>
 </div>
 <div id="we-code">
 <a href="#" class="we-back">back</a>
-Service through Code
-We build applications designed to make the lives of those in the Carnegie Mellon Community easier
+<h2>We Know How to Have a Good Time</h2>
+  <p>
+While much of what ACM does it career or self development oriented, we understand the importance of friends and relaxation. ACM often hosts get-togethers including bonding dinners, frisbee, Kinect parties.
+  </p>
+  <p>
+If you're interested in having a good time and enjoying delicious food, <%=link_to("join ACM@CMU", join_path) %>.
+  </p>
 </div>
 <div id="we-projects">
 <a href="#" class="we-back">back</a>
-Make Projects Happen
-If you have a great idea but you can’t implement it yourself, ACM can help provide expert coders in addition to startup and maintainence funds to turn your idea into reality.
+<h2>More Than Just Code</h2>
+  <p>
+At ACM, we're passionate about technology and service. We develop applications that benefit the Carnegie Mellon Community at large. Our current applications (including this website) have primarily been developed in Ruby on Rails but we are open to and welcome all technologies. Check out a few of our applications below!
+
+  </p>
+
+  <p>
+If you are interested in developing software with a cause, <%=link_to("join ACM@CMU", join_path) %>.
+ 
+
+  </p>
+
+
 </div>
 <div id="we-journals">
 <a href="#" class="we-back">back</a>
-[I’ll fix this wording later.]  We also publish ACM Communications, a tech newsletter on current trends and topics in the computing world presented in a manner that is understandable by students of all majors. You can read the current issue or browse the archive of articles.
+<h2>What's Up</h2>
+<p>
+ACM-Communications is our monthly tech newsletter. In addition to keeping you up to date on what's going on with ACM, we interview students, professors and report on the latest technologies to keep you in the know. Check out some of our issues below.
+</p>
+
+<p>
+If you're interesting in getting to know Carnegie Mellon's top students and professors, writing or publication design, <%=link_to("join ACM@CMU", join_path) %>.
+</p>
+
 </div>
 
