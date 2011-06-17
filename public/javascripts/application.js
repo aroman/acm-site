@@ -16,27 +16,27 @@ $(document).ready(function() {
   });
 
   // we page
-  $("#link-jobs").click(function() {
+  $("#link-work").click(function() {
     $("#we-menu").slideUp(200);
-    $("#we-jobs").delay(300).slideDown();
+    $("#we-work").delay(300).slideDown();
   });
   $("#link-code").click(function() {
     $("#we-menu").slideUp(200);
     $("#we-code").delay(300).slideDown();
   });
-  $("#link-projects").click(function() {
+  $("#link-play").click(function() {
     $("#we-menu").slideUp(200);
-    $("#we-projects").delay(300).slideDown();
+    $("#we-play").delay(300).slideDown();
   });
-  $("#link-journals").click(function() {
+  $("#link-write").click(function() {
     $("#we-menu").slideUp(200);
-    $("#we-journals").delay(300).slideDown();
+    $("#we-write").delay(300).slideDown();
   });
   $(".we-back").click(function() {
-    $("#we-jobs").slideUp(200);
+    $("#we-work").slideUp(200);
     $("#we-code").slideUp(200);
-    $("#we-projects").slideUp(200);
-    $("#we-journals").slideUp(200);
+    $("#we-play").slideUp(200);
+    $("#we-write").slideUp(200);
     $("#we-menu").delay(300).slideDown(200);
   });
 
