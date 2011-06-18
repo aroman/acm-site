@@ -2,6 +2,7 @@
 // This file is automatically included by javascript_include_tag :defaults
 
 $(document).ready(function() {
+  $("#we-mask").hide();
   $(".section").hide();
 
   // login box
@@ -41,7 +42,7 @@ $(document).ready(function() {
     $("#we-write .article").hide();
     $("#we-write .article").delay(300).slideDown();
   });
-  $(".we-back").click(function() {
+  $(".section .we-back").click(function() {
     $("#we-mask").fadeOut();
     $("#we-work .article").slideUp(200);
     $("#we-work").fadeOut();

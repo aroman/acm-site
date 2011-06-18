@@ -299,14 +299,6 @@ dl#board .profile p {
   filter:alpha(opacity=0.8);
 }
 
-.section .article .we-back {
-  color:#0182ac;
-  cursor:pointer;
-}
-.section .article .we-back:hover {
-  text-decoration:underline;
-}
-
 #we-work, #we-code, #we-play, #we-write {
   position:absolute;
   top:0;
@@ -316,12 +308,36 @@ dl#board .profile p {
   height:500px;
 }
 
+.section h2 {
+  border-top:none;
+  margin:0;
+  padding:0.5em 0 0.3em;
+  border-bottom:1px solid #900;
+}
+
+.section .we-back {
+  background:url('/images/we-back.png') no-repeat;
+  position:absolute;
+  right:10px;
+  top:20px;
+  width:30px; height:0;
+  margin:0 10px 10px;
+  padding-top:30px;
+  overflow:hidden;
+  cursor:pointer;
+}
+
+.section .we-back:hover {
+  background-position:-30px 0;
+}
+
 .section .image {
   position:absolute;
   float:left;
   width:200px; height:500px;
   background:url('/images/we.png');
 }
+
 #we-work .image { background-position:0 -500px; }
 #we-code .image { left:200px; background-position:-200px -500px; }
 #we-play .image { left:400px; background-position:-400px -500px; }
