@@ -2,6 +2,7 @@
 // This file is automatically included by javascript_include_tag :defaults
 
 $(document).ready(function() {
+  $(".section").hide();
 
   // login box
   $("#l-open").click(function() {
@@ -15,29 +16,41 @@ $(document).ready(function() {
     $("#l-open").delay(500).fadeIn(200);
   });
 
-  // we page
+  // we page 
   $("#link-work").click(function() {
-    $("#we-menu").slideUp(300);
-    $("#we-work").delay(300).slideDown();
+    $("#we-mask").fadeIn();
+    $("#we-work").show();
+    $("#we-work .article").hide();
+    $("#we-work .article").delay(300).slideDown();
   });
   $("#link-code").click(function() {
-    $("#we-menu").slideUp(300);
-    $("#we-code").delay(300).slideDown();
+    $("#we-mask").fadeIn();
+    $("#we-code").show();
+    $("#we-code .article").hide();
+    $("#we-code .article").delay(300).slideDown();
   });
   $("#link-play").click(function() {
-    $("#we-menu").slideUp(300);
-    $("#we-play").delay(300).slideDown();
+    $("#we-mask").fadeIn();
+    $("#we-play").show();
+    $("#we-play .article").hide();
+    $("#we-play .article").delay(300).slideDown();
   });
   $("#link-write").click(function() {
-    $("#we-menu").slideUp(300);
-    $("#we-write").delay(300).slideDown();
+    $("#we-mask").fadeIn();
+    $("#we-write").show();
+    $("#we-write .article").hide();
+    $("#we-write .article").delay(300).slideDown();
   });
   $(".we-back").click(function() {
-    $("#we-work").slideUp(200);
-    $("#we-code").slideUp(200);
-    $("#we-play").slideUp(200);
-    $("#we-write").slideUp(200);
-    $("#we-menu").delay(300).slideDown();
+    $("#we-mask").fadeOut();
+    $("#we-work .article").slideUp(200);
+    $("#we-work").fadeOut();
+    $("#we-write .article").slideUp(200);
+    $("#we-write").fadeOut();
+    $("#we-code .article").slideUp(200);
+    $("#we-code").fadeOut();
+    $("#we-play .article").slideUp(200);
+    $("#we-play").fadeOut();
   });
 
 });
