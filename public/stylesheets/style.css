@@ -349,7 +349,16 @@ dl#board .profile p {
   font-size:0.7em;
   padding:20px;
 }
-#we-work .article { left:200px; }
+#we-work .article, #we-write .article { left:200px; }
 #we-code .article { left:400px; }
-#we-write .article { left:200px; }
+
+.section .article p { font-size:1em; }
+
+.section .aside {
+  position:absolute;
+  width:160px;
+  height:440px;
+  padding:30px 20px;
+}
+#we-work .aside, #we-play .aside { left:600px; }
 
