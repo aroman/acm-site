@@ -20,6 +20,6 @@
   <% end %>
 </table>
 
-<% if current_user.role == "Administrator" %>
+<% if current_user.role == "admin" %>
 <p><%= link_to "New Member", new_member_path %></p>
 <% end %>
