@@ -39,7 +39,7 @@ body {
 
 p {
   padding-top:1em;
-  font-size:1.2em;
+  font-size:1em;
   line-height:1.5em;
 }
 
@@ -112,12 +112,16 @@ ul#nav li.current a, ul#nav li a:hover {
 .headline {
   padding:2em 0;
   background-color:#222;
-  color:#7f7f7f;
-  text-shadow: 0 1px 0 rgb(0,0,0);
+  color:#8e8e8e;
+  text-shadow: 0 2px 0 rgb(0,0,0);
 }
 
 .headline h1 {
   color:#fff;
+}
+
+.headline p {
+  font-size:1.2em;
 }
 
 .container {
@@ -183,6 +187,10 @@ a#l-close:hover { background-position:-260px -40px }
 
 #main {
   border-width:10px 0;
+}
+
+#main .container div:last-child {
+  margin-bottom:2em;
 }
 
 #sidebar {
@@ -388,8 +396,9 @@ h1.home {
 .home div {
   width:320px;
   float:left;
-  display:inline 
 }
+
+#main .home div:last-child { margin:0; }
 
 .home div h2 { 
   margin:0; padding:0 30px;
@@ -407,8 +416,8 @@ h1.home {
   border-left:1px solid #7f7f7f;
 }
 .home div p {
-  font-size:0.6em;
-  padding:10px 30px;
+  font-size:0.7em;
+  padding:20px 30px;
   border-right:1px solid #900;
 }
 .home div:first-child p {
