@@ -20,13 +20,11 @@
   </div>
 </div>
 <div id="main"> 
-  <div class="container">
     <% flash.each do |name, msg| %>
       <%= content_tag(:span, msg, :id => "flash_#{name}") %>
     <% end %>
     <%= content_tag(:h1, @title) if show_title? %>
     <%= yield %>
-  </div>
 </div>
 <div id="footer">
   <div class="container">

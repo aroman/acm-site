@@ -109,6 +109,17 @@ ul#nav li.current a, ul#nav li a:hover {
  *****************
  */
 
+.headline {
+  padding:2em 0;
+  background-color:#222;
+  color:#7f7f7f;
+  text-shadow: 0 1px 0 rgb(0,0,0);
+}
+
+.headline h1 {
+  color:#fff;
+}
+
 .container {
   position:relative;
   margin:auto;
@@ -157,7 +168,6 @@ a#l-close:hover { background-position:-260px -40px }
   background:#fff url('/images/headerbg.gif') repeat-x;
   border-bottom:10px solid #900;
   padding-bottom:30px;
-  margin-bottom:3em;
 }
 
 #logo { display:inline; text-align:center; }
@@ -186,8 +196,6 @@ a#l-close:hover { background-position:-260px -40px }
 }
 
 #footer {
-  position:relative;
-  top:3em;
   clear:both;
   background:#fff url('/images/footerbg.gif') repeat-x;
   border-top:10px solid #900;
@@ -219,7 +227,9 @@ a#l-close:hover { background-position:-260px -40px }
  */
 
 dl#board {
-  margin-top:2em;
+  margin-top:4em;
+  position:relative;
+  top:-2em;
 }
 
 dl#board .profile {
@@ -287,7 +297,7 @@ dl#board .profile p {
 #we-mask {
   display:none;
   position:absolute;
-  top:70px;
+  top:0;/*70px;*/
   left:80px;
   width:800px;
   height:500px;
@@ -298,7 +308,7 @@ dl#board .profile p {
 
 #we-work, #we-code, #we-play, #we-write {
   position:absolute;
-  top:70px;
+  top:0;/*70px;*/
   left:80px;
   color:#ddd;
   width:800px;
@@ -359,3 +369,48 @@ dl#board .profile p {
 }
 #we-work .aside, #we-play .aside { left:600px; }
 
+/***************
+ * HOMEPAGE CSS
+ ***************
+ */
+
+h1.home { 
+  text-align:center;
+  background-color:#222; 
+  height:300px; 
+}
+
+.home.container {
+  position:relative;
+  top:-30px;
+}
+
+.home div {
+  width:320px;
+  float:left;
+  display:inline 
+}
+
+.home div h2 { 
+  margin:0; padding:0 30px;
+  color:#fff;
+  font-family:Aller, Helvetica, Arial, sans-serif;
+  font-style:normal;
+  font-size:0.9em;
+  line-height:2em;
+  height:30px;
+  border-top:none;
+  border-right:1px solid #7f7f7f; 
+}
+
+.home div:first-child h2 {
+  border-left:1px solid #7f7f7f;
+}
+.home div p {
+  font-size:0.6em;
+  padding:10px 30px;
+  border-right:1px solid #900;
+}
+.home div:first-child p {
+  border-left:1px solid #900;
+}
