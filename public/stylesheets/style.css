@@ -24,17 +24,17 @@
 }
 
 @font-face {
-	font-family: Aller;
-	src: url("/images/Aller_Lt.eot") /* EOT file for IE */
+	font-family: 'Open Sans', Aller;
+	src: url("/images/'Open Sans', Aller_Lt.eot") /* EOT file for IE */
 }
 
 @font-face {
-	font-family: Aller;
-	src: url("/images/Aller_Lt.ttf") /* TTF file for CSS3 browsers */
+	font-family: 'Open Sans', Aller;
+	src: url("/images/'Open Sans', Aller_Lt.ttf") /* TTF file for CSS3 browsers */
 }
 
 body {
-  font-family:Aller, Helvetica, Arial, sans-serif;
+  font-family:'Open Sans', Aller, Helvetica, Arial, sans-serif;
 }
 
 p {
@@ -213,6 +213,7 @@ a#l-close:hover { background-position:-260px -40px }
 }
 
 .content p {
+  font-size:0.95em;
   width:720px;
   float:right;
 }
@@ -423,9 +424,9 @@ h1.home {
 .home div h2 { 
   margin:0; padding:0 30px;
   color:#fff;
-  font-family:Aller, Helvetica, Arial, sans-serif;
+  font-family:'Open Sans', Aller, Helvetica, Arial, sans-serif;
   font-style:normal;
-  font-size:0.9em;
+  font-size:0.8em;
   line-height:2em;
   height:30px;
   border-top:none;
@@ -436,10 +437,10 @@ h1.home {
   border-left:1px solid #7f7f7f;
 }
 .home div p {
-  height:120px;
+  height:150px;
   overflow:auto;
   font-size:0.7em;
-  padding:20px 30px;
+  padding:20px 30px 0;
   border-right:1px solid #900;
 }
 .home div:first-child p {
@@ -447,9 +448,9 @@ h1.home {
 }
 
 ul#events {
-  height:120px;
+  height:150px;
   font-size:0.8em;
-  padding:20px 30px;
+  padding:20px 30px 0;
   border-right:1px solid #900;
 }
 
