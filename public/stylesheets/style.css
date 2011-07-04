@@ -112,17 +112,18 @@ ul#nav li.current a, ul#nav li a:hover {
 .headline {
   padding:2em 0;
   background:#222 url('/images/headline.png') center no-repeat;
-  color:#8e8e8e;
-  text-shadow: 0 2px 0 rgb(0,0,0);
 }
 
 .headline h1 {
   color:#fff;
+  text-shadow:0 3px 0 #000;
 }
 
 .headline p {
+  color:#aaa;
   font-weight:300;
   font-size:1.2em;
+  text-shadow:0 1px 0 #000;
 }
 
 .content .aside {
