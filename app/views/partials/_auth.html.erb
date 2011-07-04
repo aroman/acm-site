@@ -1,13 +1,14 @@
 <!-- authentication module -->
-
 <% if logged_in? %>
     <%= link_to('members', members_path) %>
     <%= link_to('edit account', edit_user_path(current_user)) %>
     <%= link_to('logout', logout_path) %>
   <% else %>
 <div id="auth">
-  <%= link_to('login', login_path) %>
+  <div class="container">
   <!-- login form goes here -->
+  <p>What are you looking at? Are you trying to <%= link_to('login', login_path) %> or something?</p>
+  </div>
   <a id="l-close" href="#">close</a>
 </div>
 <%= link_to "login", "#", :id => "l-open" %>
