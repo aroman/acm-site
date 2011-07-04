@@ -121,6 +121,7 @@ ul#nav li.current a, ul#nav li a:hover {
 }
 
 .headline p {
+  font-weight:300;
   font-size:1.2em;
 }
 
