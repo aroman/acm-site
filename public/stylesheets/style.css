@@ -416,6 +416,8 @@ h1.home {
   border-left:1px solid #7f7f7f;
 }
 .home div p {
+  height:120px;
+  overflow:auto;
   font-size:0.7em;
   padding:20px 30px;
   border-right:1px solid #900;
@@ -423,3 +425,35 @@ h1.home {
 .home div:first-child p {
   border-left:1px solid #900;
 }
+
+ul#events {
+  height:120px;
+  font-size:0.8em;
+  padding:20px 30px;
+  border-right:1px solid #900;
+}
+
+ul#events li:first-child { border-top:1px solid #aaa }
+ul#events li { border-bottom:1px solid #aaa }
+
+ul#events li a {
+  color:#222;
+  display:block;
+  padding:6px;
+  width:100%;
+  overflow:hidden;
+  position:relative;
+  left:-6px;
+}
+
+ul#events li a:hover {
+  text-decoration:none;
+  background:#0182ac;
+  color:#fff;
+}
+
+ul#events li a .date { 
+  color:#900;
+  margin-right:3px; 
+}
+
