@@ -45,7 +45,7 @@ $(document).ready(function() {
 
   function openArticle(position){
     $('.article').slideUp();
-    $('#'+slideNames[position]+'-article').delay(400).slideDown();
+    $('#'+slideNames[position]+'-article').slideDown();
   }
 
   // login box
