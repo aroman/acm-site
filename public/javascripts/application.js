@@ -2,8 +2,44 @@
 // This file is automatically included by javascript_include_tag :defaults
 
 $(document).ready(function() {
-  $("#we-mask").hide();
-  $(".section").hide();
+
+  var currentPosition = 0;
+  var slides = $('.slide');
+  var numSlides = slides.length;
+  var slideNames = ['home','work','code','play','write'];
+
+  manageControls(currentPosition);
+
+  $('.control').bind('click',
+    function(){
+      switch ($(this).attr('id')) {
+        case 'home-slide': currentPosition = 0; break;
+        case 'work-slide': currentPosition = 1; break;
+        case 'code-slide': currentPosition = 2; break;
+        case 'play-slide': currentPosition = 3; break;
+        case 'write-slide':currentPosition = 4; break;
+        case 'next-slide': currentPosition+= 1; break;
+        case 'last-slide': currentPosition-= 1; break;
+      }
+      manageControls(currentPosition);
+      $('#slide-container').animate({
+        'marginLeft' : 860*(-currentPosition)
+      });
+   }); 
+
+  function manageControls(position){
+    if (position == 0) 
+      $('#last-slide').hide(); 
+    else 
+      $('#last-slide').show();
+    if (position == numSlides-1) 
+      $('#next-slide').hide(); 
+    else 
+      $('#next-slide').show();
+    
+    $('#slide-links .control').css('backgroundColor', '#0182ac');
+    $('#'+slideNames[position]+'-slide').css('backgroundColor', '#900');
+  }
 
   // login box
   $("#l-open").click(function() {
@@ -16,42 +52,4 @@ $(document).ready(function() {
     $("#auth").slideUp();
     $("#l-open").delay(500).fadeIn(200);
   });
-
-  // we page 
-  $("#link-work").click(function() {
-    $("#we-mask").fadeIn();
-    $("#we-work").show();
-    $("#we-work .article").hide();
-    $("#we-work .article").delay(300).slideDown();
-  });
-  $("#link-code").click(function() {
-    $("#we-mask").fadeIn();
-    $("#we-code").show();
-    $("#we-code .article").hide();
-    $("#we-code .article").delay(300).slideDown();
-  });
-  $("#link-play").click(function() {
-    $("#we-mask").fadeIn();
-    $("#we-play").show();
-    $("#we-play .article").hide();
-    $("#we-play .article").delay(300).slideDown();
-  });
-  $("#link-write").click(function() {
-    $("#we-mask").fadeIn();
-    $("#we-write").show();
-    $("#we-write .article").hide();
-    $("#we-write .article").delay(300).slideDown();
-  });
-  $(".section .we-back").click(function() {
-    $("#we-mask").fadeOut();
-    $("#we-work .article").slideUp(200);
-    $("#we-work").fadeOut();
-    $("#we-write .article").slideUp(200);
-    $("#we-write").fadeOut();
-    $("#we-code .article").slideUp(200);
-    $("#we-code").fadeOut();
-    $("#we-play .article").slideUp(200);
-    $("#we-play").fadeOut();
-  });
-
 });
