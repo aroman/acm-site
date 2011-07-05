@@ -22,6 +22,9 @@ $(document).ready(function() {
         case 'next-slide': currentPosition+= 1; break;
         case 'last-slide': currentPosition-= 1; break;
       }
+      if (currentPosition >= numSlides) currentPosition = 0;
+      if (currentPosition < 0) currentPosition = numSlides-1;
+
       manageControls(currentPosition);
       $('#slide-container').animate({
         'marginLeft' : 860*(-currentPosition)
@@ -30,6 +33,7 @@ $(document).ready(function() {
    }); 
 
   function manageControls(position){
+    /*
     if (position == 0) 
       $('#last-slide').hide(); 
     else 
@@ -38,7 +42,7 @@ $(document).ready(function() {
       $('#next-slide').hide(); 
     else 
       $('#next-slide').show();
-    
+    */
     $('#slide-links .control').css('backgroundColor', '#8e8e8e');
     $('#'+slideNames[position]+'-slide').css('backgroundColor', '#0182ac');
   }
