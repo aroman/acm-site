@@ -9,6 +9,7 @@ $(document).ready(function() {
   var slideNames = ['home','work','code','play','write'];
 
   manageControls(currentPosition);
+  $('.article').hide();
 
   $('.control').bind('click',
     function(){
@@ -25,6 +26,7 @@ $(document).ready(function() {
       $('#slide-container').animate({
         'marginLeft' : 860*(-currentPosition)
       });
+      openArticle(currentPosition);
    }); 
 
   function manageControls(position){
@@ -37,8 +39,13 @@ $(document).ready(function() {
     else 
       $('#next-slide').show();
     
-    $('#slide-links .control').css('backgroundColor', '#0182ac');
-    $('#'+slideNames[position]+'-slide').css('backgroundColor', '#900');
+    $('#slide-links .control').css('backgroundColor', '#8e8e8e');
+    $('#'+slideNames[position]+'-slide').css('backgroundColor', '#0182ac');
+  }
+
+  function openArticle(position){
+    $('.article').slideUp();
+    $('#'+slideNames[position]+'-article').delay(400).slideDown();
   }
 
   // login box

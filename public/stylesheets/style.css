@@ -241,6 +241,12 @@ a#l-close:hover { background-position:-260px -40px }
   top:-2em;
 }
 
+.article {
+  margin-top:2em;
+  position:relative;
+  top:-2em;
+}
+
 #footer {
   clear:both;
   background:#fff url('/images/footerbg.gif') repeat-x;
@@ -402,6 +408,8 @@ ul#sponsorships .aside {
   position:relative;
   background-color:#0182ac;
   border-radius:10px;
+  -moz-border-radius:10px;
+  -webkit-border-radius:10px;
 }
 
 /*
