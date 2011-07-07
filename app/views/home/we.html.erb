@@ -1,141 +1,64 @@
+<script src="/javascripts/jquery.ba-hashchange.min.js" type="text/javascript"></script>
+<script src="/javascripts/slideshow.js" type="text/javascript"></script>
+
 <div class="headline">
-<div class="slideshow container">
-<span class="we">We</span>
-<span id="last-slide" class="control">last slide</span>
-<div id="slideshow">
-<ul id="slide-container">
-  <li class="slide">
-  <h1><span class="we">We</span>...</h2>
-  <p>are really cool! Really!</p>
-  </li>
-  <li class="slide">
-  <h1><span class="we">We</span> Work.</h2>
-  <p>
-  ACM@CMU partners with employers to provide students networking and, ultimately, employment  opportunities. We host both large and small scale events that provide intimate access to highly  competitive and sought after employers. 
-  </p>
-  </li>
-  <li class="slide">
-  <h1><span class="we">We</span> Code.</h2>
-  <p>
-  At ACM@CMU, we are passionate about technology and service. We develop applications that benefit the Carnegie Mellon community at large. 
-  </p>
-  </li>
-  <li class="slide">
-  <h1><span class="we">We</span> Play.</h2>
-  <p>
-  While much of what ACM does it career or self development oriented, we understand the importance of friends and relaxation. ACM often hosts get-togethers including bonding dinners, pickup frisbee games, and Kinect parties.
-  </p>
-  </li>
-  <li class="slide">
-  <h1><span class="we">We</span> Write.</h2>
-  <p>
-  ACM-Communications is our monthly tech newsletter. In addition to keeping you up to date on what's going on with ACM, we interview students, professors and report on the latest technologies to keep you in the know.
-  </p>
-  </li>
-</ul>
-</div>
-<span id="next-slide" class="control">next slide</span>
-<ul id="slide-links">
-  <li class="control" id="home-slide">1</li>
-  <li class="control" id="work-slide">2</li>
-  <li class="control" id="code-slide">3</li>
-  <li class="control" id="play-slide">4</li>
-  <li class="control" id="write-slide">5</li>
-</ul>
-</div>
-</div>
-<div id="work-article" class="article container">
-  <p>1 (one; play /ˈwʌn/ or UK /ˈwɒn/) is a number, numeral, and the name of the glyph representing that number. It represents a single entity, the unit of counting or measurement. For example, a line segment of "unit length" is a line segment of length 1.</p>
-</div>
-<div id="code-article" class="article container">
-  <p>
-  Two has many properties in mathematics.[1] An integer is called even if it is divisible by 2. For integers written in a numeral system based on an even number, such as decimal and hexadecimal, divisibility by 2 is easily tested by merely looking at the last digit. If it is even, then the whole number is even. In particular, when written in the decimal system, all multiples of 2 will end in 0, 2, 4, 6, or 8.
-  </p>
-  <p>
-  Two is the smallest and the first prime number, and the only even one[2] (for this reason it is sometimes called "the oddest prime"[3]). The next prime is three. Two and three are the only two consecutive prime numbers. 2 is the first Sophie Germain prime, the first factorial prime, the first Lucas prime, and the first Smarandache-Wellin prime. It is an Eisenstein prime with no imaginary part and real part of the form 3n − 1. It is also a Stern prime, a Pell number, the first Fibonacci prime, and a Markov number, appearing in infinitely many solutions to the Markov Diophantine equation involving odd-indexed Pell numbers.
-  </p>
-</div>
-<div id="play-article" class="article container">
-  <p>
-  Three is often the largest number written with as many lines as the number represents. The Romans tired of writing 4 as IIII, instead using IV, but to this day 3 is written as three lines in Roman and Chinese numerals. This was the way the Brahmin Indians wrote it, and the Gupta made the three lines more curved. The Nagari started rotating the lines clockwise and ending each line with a slight downward stroke on the right. Eventually they made these strokes connect with the lines below, and evolved it to a character that looks very much like a modern 3 with an extra stroke at the bottom. It was the Western Ghubar Arabs who finally eliminated the extra stroke and created our modern 3.
-  </p>
-</div>
-<div id="write-article" class="article container">
-  <p>
-  4 (four; /foɹ/) is a number, numeral, and glyph. It is the natural number following 3 and preceding 5.
-  </p>
-</div>
-<!--
-<ul id="we-menu">
-<li id="link-work">Work</li>
-<li id="link-code">Code</li>
-<li id="link-play">Play</li>
-<li id="link-write">Write</li>
-</ul><div id="we-mask"></div>
-<div id="we-work" class="section">
-  <div class="image"></div>
-  <div class="article">
-    <span class="we-back">back</span>
-    <h2>Join Us. ????. Profit.</h2>
-    <p>
-    ACM partners with employers to provide students networking and, ultimately, employment  opportunities. We host both large and small scale events that provide intimate access to highly  competitive and sought after employers. Types of past events that we've hosted include  information sessions, programming competitions and tech talks. ACM also hosts private  networking events with companies for active members. All our events are well stocked with  food. Check out a list of our partners below.
-    </p>
-    <p>
-    If you're interested in finding employment opportunities, <%=link_to("join ACM@CMU", join_path) %>.
-    </p>
-  </div>
-  <div class="aside">
-    <img src="/images/partners.png" alt="ACM@CMU Partners" />
-  </div>
-</div>
-<div id="we-code" class="section">
-  <div class="image"></div>
-<div class="article">
-    <span class="we-back">back</span>
+<div class="container">
+  <span class="we">We</span>
+  <div class="slideshow">
+  <ul class="slideContainer">
+    <li class="slide" title="are">
+      <!--<h1></h1>-->
+      <br /><br /><br /><br />
+      <br /><br /><br /><br />
+    </li>
+    <li class="slide" title="work">
+      <h1><span class="we">We</span> Work.</h1>
+      <p>
+      ACM@CMU partners with employers to provide students networking and, ultimately, employment  opportunities. We host both large and small scale events that provide intimate access to highly  competitive and sought after employers. 
+      </p>
+      <div class="article container">
+      <h2>Join Us. ???. Profit.</h2>
+      <p>
+      Types of past events that we've hosted include  information sessions, programming competitions and tech talks. ACM also hosts private  networking events with companies for active members. All our events are well stocked with  food. Check out a list of our partners below.
+      </p>
+      If you're interested in finding employment opportunities, <%=link_to("join ACM@CMU", join_path) %>.
+      </div>
+    </li>
+    <li class="slide" title="code">
+      <h1><span class="we">We</span> Code.</h1>
+      <p>
+      At ACM@CMU, we are passionate about technology and service. We develop applications that benefit the Carnegie Mellon community at large. 
+      </p>
+      <div class="article container">
   <h2>More Than Just Code</h2>
-  <p>
-  At ACM, we're passionate about technology and service. We develop applications that benefit the Carnegie Mellon Community at large. Our current applications (including this website) have primarily been developed in Ruby on Rails but we are open to and welcome all technologies. Check out a few of our applications below!
-  </p>
-  <p>
+  Our current applications (including this website) have primarily been developed in Ruby on Rails but we are open to and welcome all technologies. Check out a few of our applications below!
+
   If you are interested in developing software with a cause, <%=link_to("join ACM@CMU", join_path) %>.
-  </p>
-</div>
-<div class="aside">
-  (apps go here)
-</div>
-</div>
-<div id="we-play" class="section">
-  <div class="image"></div>
-  <div class="article">
-    <span class="we-back">back</span>
+      </div>
+    </li>
+    <li class="slide" title="play">
+      <h1><span class="we">We</span> Play.</h1>
+      <p>
+      While much of what ACM does it career or self development oriented, we understand the importance of friends and relaxation. ACM often hosts get-togethers including bonding dinners, pickup frisbee games, and Kinect parties.
+      </p>
+      <div class="article container">
     <h2>Food &amp; Games</h2>
-    <p>
-    While much of what ACM does it career or self development oriented, we understand the importance of friends and relaxation. ACM often hosts get-togethers including bonding dinners, frisbee, Kinect parties.
-    </p>
-    <p>
     If you're interested in having a good time and enjoying delicious food, <%=link_to("join ACM@CMU", join_path) %>.
-    </p>
-  </div>
-  <div class="aside">
-    (cool pictures here)
-  </div>
-</div>
-<div id="we-write" class="section">
-  <div class="image"></div>
-<div class="article">
-    <span class="we-back">back</span>
+
+      </div>
+    </li>
+    <li class="slide" title="write">
+      <h1><span class="we">We</span> Write.</h1>
+      <p>
+      ACM-Communications is our monthly tech newsletter. In addition to keeping you up to date on what's going on with ACM, we interview students, professors and report on the latest technologies to keep you in the know.
+      </p>
+      <div class="article container">
   <h2>ACM Communications</h2>
-  <p>
-  ACM-Communications is our monthly tech newsletter. In addition to keeping you up to date on what's going on with ACM, we interview students, professors and report on the latest technologies to keep you in the know. Check out some of our issues below.
-  </p>
-  <p>
   If you're interesting in getting to know Carnegie Mellon's top students and professors, writing or publication design, <%=link_to("join ACM@CMU", join_path) %>.
-  </p>
+
+      </div>
+    </li>
+  </ul>
+  </div>
 </div>
-<div class="aside">
-  <a href="http://www.andrew.cmu.edu/user/jcmacdon/ACMC/ACMC2_3.pdf">
-    <img src="/images/ACMC2_3.png" width="160px" alt="ACM Communications Vol.II, Issue 3" />
-  </a>
 </div>
-</div>
--->
