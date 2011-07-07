@@ -69,7 +69,7 @@ $(document).ready(function() {
       $('.slideshow .control.last').hide();
       $('span.we').eq(0).stop().fadeOut(200);
     } else {
-      $('span.we').eq(0).stop().fadeIn();
+      $('span.we').eq(0).fadeIn();
     }
     if (currentSlide == numSlides-1) $('.slideshow .next').hide();
 

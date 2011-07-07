@@ -8,7 +8,7 @@ class HomeController < ApplicationController
   end
 
   def we
-    @title = "What We Do"
+    @title = "Activities"
   end
 
   def join

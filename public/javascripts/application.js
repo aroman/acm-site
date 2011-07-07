@@ -2,15 +2,26 @@
 // This file is automatically included by javascript_include_tag :defaults
 
 $(document).ready(function() {
-  // login box
+  
+  /* auth module */
+  
+  /* generate links */
+  if ($('#auth').attr('class') == 'form') {
+    $('#auth').hide();
+    $('#auth .container')
+      .append('<span id="l-close">close</span>');
+    $('#header .container')
+      .prepend('<span id="l-open">open</span>');
+  }
+
   $("#l-open").click(function() {
     $("#l-open").slideUp(200);
     $("#auth").slideDown();
-    $("#l-close").delay(500).fadeIn(200);
+   // $("#l-close").delay(500).fadeIn(200);
   });
   $("#l-close").click(function() {
-    $("#l-close").slideUp(200);
+   // $("#l-close").slideUp(200);
     $("#auth").slideUp();
-    $("#l-open").delay(500).fadeIn(200);
+    $("#l-open").delay(300).slideDown(200);
   });
 });

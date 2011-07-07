@@ -1,15 +1,19 @@
 <!-- authentication module -->
+<div id="auth"<%= raw(" class=\"form\"") if !logged_in? %>>
 <% if logged_in? %>
-    <%= link_to('members', members_path) %>
-    <%= link_to('edit account', edit_user_path(current_user)) %>
-    <%= link_to('logout', logout_path) %>
+  <ul class="nav container">
+    <li><%= link_to('Members', members_path) %></li>
+    <li><%= link_to('Edit Account', edit_user_path(current_user)) %></li>
+    <li><%= link_to('Logout', logout_path) %></li>
+  </ul>
   <% else %>
-<div id="auth">
-  <div class="container">
   <!-- login form goes here -->
-  <p>What are you looking at? Are you trying to <%= link_to('login', login_path) %> or something?</p>
-  </div>
-  <a id="l-close" href="#">close</a>
+  <%= form_tag sessions_path, :class => 'container' do %>
+    <!--<%= label_tag :login, "Andrew ID" %>-->
+    <%= text_field_tag :login, params[:login], :placeholder => 'Andrew ID' %>
+    <!--<%= label_tag :password %>-->
+    <%= password_field_tag :password, value = 'Password' %>
+    <%= submit_tag "Log in" %>
+  <% end %>  
+<% end %>
 </div>
-<%= link_to "login", "#", :id => "l-open" %>
-  <% end %>

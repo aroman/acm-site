@@ -10,6 +10,9 @@
 <%= yield(:head) %>
 </head>
 <body>
+    <% flash.each do |name, msg| %>
+      <%= content_tag(:span, msg, :id => "flash_#{name}") %>
+    <% end %>
 <%= render(:partial => 'partials/auth') %>
 <div id="header">
   <div class="container">
@@ -21,9 +24,6 @@
   </div>
 </div>
 <div id="main"> 
-    <% flash.each do |name, msg| %>
-      <%= content_tag(:span, msg, :id => "flash_#{name}") %>
-    <% end %>
     <%= content_tag(:h1, @title) if show_title? %>
     <%= yield %>
 </div>

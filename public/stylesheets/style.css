@@ -161,6 +161,7 @@ ul#nav li.current a, ul#nav li a:hover {
 }
 
 .container {
+  display:block;
   position:relative;
   margin:auto;
   width:960px;
@@ -174,11 +175,81 @@ ul#nav li.current a, ul#nav li a:hover {
   color:#eee;
   position:relative;
   background:#222 url('/images/headline.png') no-repeat center;
-  display:none;
-  height:60px;
+  padding-left:10px;
 }
 
-a#l-open, a#l-close {
+form label {
+  float:left;
+  color:#fff;
+  width:25%;
+  padding:5px 10px;
+  margin:10px 5px;
+  clear:left;
+}
+
+form input {
+  background-color:#fff;
+  border:0;
+  padding:5px 10px;
+  margin:10px 5px;
+}
+
+form select {
+  background:#fff none;
+  border:0 none;
+  padding:5px 10px;
+  margin:10px 5px;
+}
+
+form input[type="submit"] {
+  color:#fff;
+  cursor:pointer;
+  background:#555 none;
+}
+
+form input[type="submit"]:hover {
+  background-color:#666;
+}
+
+#main form dl {
+  width:60%;
+  border:1px solid #666;
+  padding:1em;
+  margin:2em 0 1em;
+}
+
+#main form.login {
+  width:60%;
+}
+
+#main form.login input[type="text"], 
+#main form.login input[type="password"] {
+  width:50%;
+}
+
+#main form input[type="text"], #main form input[type="password"] {
+  width:60%;
+}
+
+#auth ul.nav li {
+ display:inline-block;
+}
+
+#auth a {
+  display:block;
+  color:#fff;
+  font-size:0.9em;
+  padding:10px 10px 13px;
+}
+
+#auth a:hover {
+  background:#333;
+  border-bottom:3px solid #900;
+  padding-bottom:10px;
+  text-decoration:none;
+}
+
+#l-open, #l-close {
   z-index:9;
   position:absolute;
   background:url('/images/nav.png');
@@ -186,23 +257,23 @@ a#l-open, a#l-close {
   height:0;
   padding-top:20px;
   overflow:hidden;
+  cursor:pointer;
 }
 
-a#l-open {
+#l-open {
   top:0px;
   right:20px;
   background-position:-210px -10px;
 }
 
-a#l-close {
-  display:none;
+#l-close {
   bottom:0px;
   right:20px;
   background-position:-260px -10px;
 }
 
-a#l-open:hover { background-position:-210px -40px }
-a#l-close:hover { background-position:-260px -40px }
+#l-open:hover { background-position:-210px -40px }
+#l-close:hover { background-position:-260px -40px }
 
 #header {
   background:#fff url('/images/headerbg.gif') repeat-x;

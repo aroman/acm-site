@@ -1,4 +1,6 @@
-<% title "Members" %>
+<div class="headline">
+<div class="container">
+<h1>Members</h1>
 
 <table>
   <tr>
@@ -23,3 +25,5 @@
 <% if current_user.role == "admin" %>
 <p><%= link_to "New Member", new_member_path %></p>
 <% end %>
+</div>
+</div>
