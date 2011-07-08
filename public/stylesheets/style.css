@@ -178,27 +178,32 @@ ul#nav li.current a, ul#nav li a:hover {
   padding-left:10px;
 }
 
+#auth form {
+  padding-top:10px;
+}
+
 form label {
-  float:left;
+  display:block;
   color:#fff;
+  font-size:0.7em;
   width:25%;
-  padding:5px 10px;
-  margin:10px 5px;
-  clear:left;
+  margin:0 5px 5px;
 }
 
 form input {
+  font-family:'Open Sans';
+  font-size:0.8em;
   background-color:#fff;
   border:0;
   padding:5px 10px;
-  margin:10px 5px;
+  margin:0 5px 10px;
 }
 
 form select {
   background:#fff none;
   border:0 none;
   padding:5px 10px;
-  margin:10px 5px;
+  margin:0 5px 10px;
 }
 
 form input[type="submit"] {
@@ -212,9 +217,8 @@ form input[type="submit"]:hover {
 }
 
 #main form dl {
-  width:60%;
-  border:1px solid #666;
-  padding:1em;
+  /*border:1px solid #666;
+  padding:1em;*/
   margin:2em 0 1em;
 }
 
@@ -228,7 +232,7 @@ form input[type="submit"]:hover {
 }
 
 #main form input[type="text"], #main form input[type="password"] {
-  width:60%;
+  width:30%;
 }
 
 #auth ul.nav li {

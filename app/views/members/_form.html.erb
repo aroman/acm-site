@@ -1,20 +1,14 @@
 <%= form_for @member do |f| %>
   <%= f.error_messages %>
-  <p>
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
-  </p>
-  <p>
-    <%= f.label :andrew_id %><br />
-    <%= f.text_field :andrew_id %>
-  </p>
-  <p>
-    <%= f.label :year %><br />
-    <%= f.text_field :year %>
-  </p>
-  <p>
-    <%= f.label :title %><br />
-    <%= f.text_field :title %>
-  </p>
-  <p><%= f.submit %></p>
+<dl>
+  <dd><%= f.label :name %></dd>
+  </dt><%= f.text_field :name %></dt>
+  <dd><%= f.label :andrew_id %></dd>
+  <dt><%= f.text_field :andrew_id %></dt>
+  <dd><%= f.label :year %></dd>
+  <dt><%= f.text_field :year %></dt>
+  <dd><%= f.label :title %></dd>
+  <dt><%= f.text_field :title %></dt>
+</dl>
+  <%= f.submit %>
 <% end %>
