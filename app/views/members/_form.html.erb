@@ -1,14 +1,61 @@
 <%= form_for @member do |f| %>
   <%= f.error_messages %>
-<dl>
-  <dd><%= f.label :name %></dd>
-  </dt><%= f.text_field :name %></dt>
-  <dd><%= f.label :andrew_id %></dd>
-  <dt><%= f.text_field :andrew_id %></dt>
-  <dd><%= f.label :year %></dd>
-  <dt><%= f.text_field :year %></dt>
-  <dd><%= f.label :title %></dd>
-  <dt><%= f.text_field :title %></dt>
-</dl>
-  <%= f.submit %>
+  <dl>  
+    <dt><%=f.label :username %></dt>
+    <dd><%= f.text_field :username %></dd>
+  
+  
+    <dt><%=f.label :email, "Email Address" %></dt>
+    <dd><%= f.text_field :email %></dd>
+  
+  
+    <dt><%=f.label :password %></dt>
+    <dd><%= f.password_field :password %></dd>
+  
+  
+    <dt><%=f.label :password_confirmation, "Confirm Password" %></dt>
+    <dd><%= f.password_field :password_confirmation %></dd>
+  
+    <dt><%=f.label :role, "Role" %></dt>
+    <dd><%=f.select :role, Member::ROLES %></dd>
+  
+    <dt><%=f.label :first_name, "First Name" %></dt>
+    <dd><%= f.text_field :first_name %></dd>
+  
+  
+    <dt><%=f.label :last_name, "Last Name" %></dt>
+    <dd><%= f.text_field :last_name %></dd>
+  
+  
+    <dt><%=f.label :andrew_id, "Andrew ID" %></dt>
+    <dd><%= f.text_field :andrew_id %></dd>
+  
+  
+    <dt><%=f.label :major, "Major" %></dt>
+    <dd><%= f.text_field :major %></dd>
+  
+  
+    <dt><%=f.label :officer_position, "Officer" %></dt>
+    <dd><%= f.text_field :officer_position %></dd>
+  
+  
+    <dt><%=f.label :committee, "Committee" %></dt>
+    <dd><%= f.text_field :committee %></dd>
+  
+  
+    <dt><%=f.label :phone, "Phone" %></dt>
+    <dd><%= f.text_field :phone %></dd>
+  
+  
+    <dt><%=f.label :shirt_size, "Shirt Size" %></dt>
+    <dd><%= f.text_field :shirt_size %></dd>
+  
+  
+    <dt><%=f.label :year, "Year" %></dt>
+    <dd><%= f.text_field :year %></dd>
+
+
+  </dl>
+
+  <%= f.submit (@member.new_record? ? "Add New" : "Update") %>
 <% end %>

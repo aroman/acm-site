@@ -1,8 +1,7 @@
 Acm::Application.routes.draw do
-  match 'user/edit' => 'users#edit', :as => :edit_current_user
+  match 'member/edit' => 'members#edit', :as => :edit_current_member
 
- # removed so users cannot signup to the site
- # match 'signup' => 'users#new', :as => :signup
+  match 'signup' => 'members#new', :as => :signup
 
   match 'logout' => 'sessions#destroy', :as => :logout
 
@@ -10,9 +9,10 @@ Acm::Application.routes.draw do
 
   resources :sessions
 
-  resources :users
-
   resources :members
+
+ # removed so users cannot signup to the site
+ # match 'signup' => 'users#new', :as => :signup
 
   resources :articles
 

@@ -3,8 +3,8 @@
 # common example you might add to your application layout file.
 #
 #   <% if logged_in? %>
-#     Welcome <%= current_user.username %>.
-#     <%= link_to "Edit profile", edit_current_user_path %> or
+#     Welcome <%= current_member.username %>.
+#     <%= link_to "Edit profile", edit_current_member_path %> or
 #     <%= link_to "Log out", logout_path %>
 #   <% else %>
 #     <%= link_to "Sign up", signup_path %> or
@@ -17,15 +17,15 @@
 #   before_filter :login_required, :except => [:index, :show]
 module ControllerAuthentication
   def self.included(controller)
-    controller.send :helper_method, :current_user, :logged_in?, :redirect_to_target_or_default
+    controller.send :helper_method, :current_member, :logged_in?, :redirect_to_target_or_default
   end
 
-  def current_user
-    @current_user ||= User.find(session[:user_id]) if session[:user_id]
+  def current_member
+    @current_member ||= Member.find(session[:member_id]) if session[:member_id]
   end
 
   def logged_in?
-    current_user
+    current_member
   end
 
   def login_required

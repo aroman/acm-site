@@ -1,16 +1,6 @@
 require 'test_helper'
 
 class MembersControllerTest < ActionController::TestCase
-  def test_index
-    get :index
-    assert_template 'index'
-  end
-
-  def test_show
-    get :show, :id => Member.first
-    assert_template 'show'
-  end
-
   def test_new
     get :new
     assert_template 'new'
@@ -25,30 +15,37 @@ class MembersControllerTest < ActionController::TestCase
   def test_create_valid
     Member.any_instance.stubs(:valid?).returns(true)
     post :create
-    assert_redirected_to member_url(assigns(:member))
+    assert_redirected_to root_url
+    assert_equal assigns['member'].id, session['member_id']
+  end
+
+  def test_edit_without_user
+    get :edit, :id => "ignored"
+    assert_redirected_to login_url
   end
 
   def test_edit
-    get :edit, :id => Member.first
+    @controller.stubs(:current_member).returns(Member.first)
+    get :edit, :id => "ignored"
     assert_template 'edit'
   end
 
+  def test_update_without_user
+    put :update, :id => "ignored"
+    assert_redirected_to login_url
+  end
+
   def test_update_invalid
+    @controller.stubs(:current_member).returns(Member.first)
     Member.any_instance.stubs(:valid?).returns(false)
-    put :update, :id => Member.first
+    put :update, :id => "ignored"
     assert_template 'edit'
   end
 
   def test_update_valid
+    @controller.stubs(:current_member).returns(Member.first)
     Member.any_instance.stubs(:valid?).returns(true)
-    put :update, :id => Member.first
-    assert_redirected_to member_url(assigns(:member))
-  end
-
-  def test_destroy
-    member = Member.first
-    delete :destroy, :id => member
-    assert_redirected_to members_url
-    assert !Member.exists?(member.id)
+    put :update, :id => "ignored"
+    assert_redirected_to root_url
   end
 end

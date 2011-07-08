@@ -1,13 +1,9 @@
 class MembersController < ApplicationController
-  before_filter :login_required, :except => [:rsvp, :update, :edit]
+ 
   authorize_resource
-
+  before_filter :login_required, :except => [:new, :create]
   def index
     @members = Member.all
-  end
-
-  def show
-    @member = Member.find(params[:id])
   end
 
   def new
@@ -17,28 +13,23 @@ class MembersController < ApplicationController
   def create
     @member = Member.new(params[:member])
     if @member.save
-      redirect_to @member, :notice => "Successfully created member."
+      session[:member_id] = @member.id
+      redirect_to root_url, :notice => "Thank you for signing up! You are now logged in."
     else
       render :action => 'new'
     end
   end
 
   def edit
-    @member = Member.find(params[:id])
+    @member = current_member
   end
 
   def update
-    @member = Member.find(params[:id])
+    @member = current_member
     if @member.update_attributes(params[:member])
-      redirect_to @member, :notice  => "Successfully updated member."
+      redirect_to root_url, :notice => "Your profile has been updated."
     else
       render :action => 'edit'
     end
-  end
-
-  def destroy
-    @member = Member.find(params[:id])
-    @member.destroy
-    redirect_to members_url, :notice => "Successfully destroyed member."
   end
 end

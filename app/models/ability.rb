@@ -1,11 +1,11 @@
 class Ability
   include CanCan::Ability
 
-  def initialize(user)
+  def initialize(member)
 
-    user ||= User.new
+    member ||= Member.new
     
-    if user.role? :admin
+    if member.role? :admin
       can :manage, :all
     else
       can :read, :all
