@@ -2,6 +2,7 @@
 <div id="auth"<%= raw(" class=\"form\"") if !logged_in? %>>
 <% if logged_in? %>
   <ul class="nav container">
+    <li style="color: yellow"><%= "Welcome, #{current_member.username} (#{current_member.first_name}, #{current_member.last_name})" %></li>
     <li><%= link_to('Members', members_path) %></li>
     <li><%= link_to('Edit Account', edit_member_path(current_member)) %></li>
     <li><%= link_to('Logout', logout_path) %></li>
