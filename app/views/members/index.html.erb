@@ -36,6 +36,7 @@
   <% end %>
 </table>
 
+<%= if current_member.role == "admin" %>
 <p><%= link_to "New Member", new_member_path %></p>
   </div>
 </div>
