@@ -10,33 +10,12 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110708073518) do
-
-  create_table "apps", :force => true do |t|
-    t.string   "name"
-    t.string   "link"
-    t.string   "image"
-    t.text     "description"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "articles", :force => true do |t|
-    t.date     "date"
-    t.string   "issue"
-    t.integer  "volume"
-    t.string   "link"
-    t.string   "image"
-    t.text     "description"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
+ActiveRecord::Schema.define(:version => 20110708071515) do
 
   create_table "members", :force => true do |t|
     t.string   "username"
-    t.string   "email"
-    t.string   "password_hash"
     t.string   "password_salt"
+    t.string   "password_hash"
     t.string   "first_name"
     t.string   "last_name"
     t.string   "andrew_id"
@@ -44,6 +23,7 @@ ActiveRecord::Schema.define(:version => 20110708073518) do
     t.string   "officer_position"
     t.string   "committee"
     t.string   "phone"
+    t.string   "email"
     t.string   "shirt_size"
     t.integer  "year"
     t.string   "role"
