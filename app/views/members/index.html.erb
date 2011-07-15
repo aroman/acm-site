@@ -12,7 +12,9 @@
     <th>Committee</th>
     <th>Phone</th>
     <th>Shirt Size</th>
+  <% if current_member.role == "admin" %>  
     <th colspan="2">Options</th>
+  <% end %>
   </tr>
   <% for member in @members %>
     <tr>
@@ -25,7 +27,7 @@
       <td><%= member.phone %></td>
       <td><%= member.shirt_size %></td>
    
-  <% if current_member.role == "admin" || current_member == member%>
+  <% if current_member.role == "admin"%>
       <td><%= link_to "Edit", edit_member_path(member) %></td>
       <td><%= link_to "Delete", member, :confirm => 'Are you sure?', :method => :delete %></td>
    <% end %>

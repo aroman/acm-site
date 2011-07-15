@@ -23,7 +23,7 @@ class Member < ActiveRecord::Base
 
   # login can be either username or email address
   def self.authenticate(login, pass)
-    member = find_by_username(login) || find_by_email(login)
+    member = find_by_andrew_id(login)
     return member if member && member.password_hash == member.encrypt_password(pass)
   end
 

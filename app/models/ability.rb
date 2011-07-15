@@ -7,10 +7,10 @@ class Ability
     
     if member.role? :admin
       can :manage, :all
-#    elsif member.role? :user  #this is so a user can edit own details
- #     can :manage, Member do |memberi|
-#        memberi.try == member
- #     end
+    elsif member.role? :user  #this is so a user can edit own details
+      can :manage, Member do |member|
+        member.try == member
+      end
     else
       can :read, :all
     end
