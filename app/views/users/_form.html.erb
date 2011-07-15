@@ -1,0 +1,34 @@
+
+<%= form_for @user do |f| %>
+  <%= f.error_messages %>
+  <dl>
+  <dt>
+    <%= f.label :username %></dt>
+  <dd>
+    <%= f.text_field :username %>
+  </dd>
+  <dt>
+    <%= f.label :email, "Email Address" %></dt>
+  <dd>
+    <%= f.text_field :email %>
+  </dd>
+  <dt>
+    <%= f.label :password %></dt>
+  <dd>
+    <%= f.password_field :password %>
+  </dd>
+  <dt>
+    <%= f.label :password_confirmation, "Confirm Password" %></dt>
+  <dd>
+    <%= f.password_field :password_confirmation %>
+  </dd>
+  <% if current_user.role == 'admin' %>
+    <dt>
+      <%= f.label :role %></dt>
+    <dd>
+      <%= f.select :role, User::ROLES %>
+    </dd>
+   <% end %>
+  </dl>
+  <%= f.submit (@user.new_record? ? "Sign up" : "Update") %>
+<% end %>
