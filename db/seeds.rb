@@ -8,7 +8,33 @@
 
 
 #Admin account
-  Member.create(:role => 'admin', :username => 'admin', :email => 'admin@example.com', :password => 'secret', :first_name => 'N/A', :last_name => 'N/A', :andrew_id => 'N/A', :major => 'N/A', :officer_position => 'N/A', :committee => 'N/A', :phone => 'N/A', :shirt_size => 'N/A', :year => 'N/A')
+  Member.create(
+    :andrew_id => 'admin', 
+    :password => 'secret', 
+    :first_name => 'John', 
+    :last_name => 'Barnaby', 
+    :email => 'admin@example.com', 
+    :role => 'admin', 
+    :major => 'N/A', 
+    :year => 'N/A',
+    :officer_position => 'N/A', 
+    :committee => 'N/A', 
+    :phone => 'N/A', 
+    :shirt_size => 'N/A'
+  )
 
 #User account
-  Member.create(:username => 'user', :email => 'user@example.com', :password => 'secret', :role => 'user', :first_name => 'N/A', :last_name => 'N/A', :andrew_id => 'N/A', :major => 'N/A', :officer_position => 'N/A', :committee => 'N/A', :phone => 'N/A', :shirt_size => 'N/A', :year => 'N/A')
+  Member.create(
+    :andrew_id => 'user', 
+    :password => 'secret', 
+    :first_name => 'N/A', 
+    :last_name => 'N/A', 
+    :email => 'user@example.com', 
+    :role => 'user', 
+    :major => 'N/A', 
+    :year => 'N/A',
+    :officer_position => 'N/A', 
+    :committee => 'N/A', 
+    :phone => 'N/A', 
+    :shirt_size => 'N/A'
+  )

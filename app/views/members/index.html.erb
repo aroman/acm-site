@@ -4,43 +4,37 @@
 
 <table>
   <tr>
-    <th>Username</th>
-    <th>Email</th>
-    <th>First Name</th>
-    <th>Last Name</th>
     <th>Andrew ID</th>
-    <th>Major</th>
-    <th>Officer Position</th>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Class</th>
+    <!--th>Officer Position</th-->
     <th>Committee</th>
     <th>Phone</th>
     <th>Shirt Size</th>
-    <th>Year</th>
+    <th colspan="2">Options</th>
   </tr>
   <% for member in @members %>
     <tr>
-      <td><%= member.username %></td>
-      <td><%= member.email %></td>
-      <td><%= member.first_name %></td>
-      <td><%= member.last_name %></td>
       <td><%= member.andrew_id %></td>
-      <td><%= member.major %></td>
-      <td><%= member.officer_position %></td>
+      <td><%= member.first_name %> <%= member.last_name %></td>
+      <td><%= member.email %></td>
+      <td><%= member.major %> <%= member.year %></td>
+      <!--td><%= member.officer_position %></td-->
       <td><%= member.committee %></td>
       <td><%= member.phone %></td>
       <td><%= member.shirt_size %></td>
-      <td><%= member.year %></td>
    
   <% if current_member.role == "admin" || current_member == member%>
-      <td><%= link_to "Show", member %></td>
       <td><%= link_to "Edit", edit_member_path(member) %></td>
-      <td><%= link_to "Destroy", member, :confirm => 'Are you sure?', :method => :delete %></td>
+      <td><%= link_to "Delete", member, :confirm => 'Are you sure?', :method => :delete %></td>
    <% end %>
     </tr>
   <% end %>
 </table>
 
    <% if current_member.role == "admin" %>
-<p><%= link_to "New Member", new_member_path %></p>
+  <%= link_to "New Member", new_member_path %>
    <% end %>
   </div>
 </div>

@@ -1,8 +1,8 @@
 <%= form_for @member do |f| %>
   <%= f.error_messages %>
   <dl>  
-    <dt><%=f.label :username %></dt>
-    <dd><%= f.text_field :username %></dd>
+    <dt><%=f.label :andrew_id, "Andrew ID" %></dt>
+    <dd><%= f.text_field :andrew_id %></dd>
   
   
     <dt><%=f.label :email, "Email Address" %></dt>
@@ -25,10 +25,6 @@
   
     <dt><%=f.label :last_name, "Last Name" %></dt>
     <dd><%= f.text_field :last_name %></dd>
-  
-  
-    <dt><%=f.label :andrew_id, "Andrew ID" %></dt>
-    <dd><%= f.text_field :andrew_id %></dd>
   
   
     <dt><%=f.label :major, "Major" %></dt>

@@ -2,23 +2,23 @@
 
 <p>
   <strong>Name:</strong>
-  <%= @member.name %>
+  <%= member.first_name %> <%= member.last_name %>
 </p>
 <p>
   <strong>Andrew:</strong>
-  <%= @member.andrew_id %>
+  <%= member.andrew_id %>
 </p>
 <p>
   <strong>Year:</strong>
-  <%= @member.year %>
+  <%= member.year %>
 </p>
 <p>
   <strong>Title:</strong>
-  <%= @member.title %>
+  <%= member.title %>
 </p>
 
 <p>
-  <%= link_to "Edit", edit_member_path(@member) %> |
-  <%= link_to "Destroy", @member, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "Edit", edit_member_path(member) %> |
+  <%= link_to "Destroy", member, :confirm => 'Are you sure?', :method => :delete %> |
   <%= link_to "View All", members_path %>
 </p>

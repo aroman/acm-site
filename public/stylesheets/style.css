@@ -247,7 +247,7 @@ form input[type="submit"]:hover {
 }
 
 #auth a:hover {
-  background:#333;
+  background:#444;
   border-bottom:3px solid #900;
   padding-bottom:10px;
   text-decoration:none;
@@ -350,6 +350,38 @@ form input[type="submit"]:hover {
   font-family:Georgia, serif;
   font-size:0.7em;
   text-shadow: 0 1px 0 rgb(255,255,255);
+}
+
+table {
+  margin:1em 0;
+  width:100%;
+  border-collapse:collapse;
+  font-size:0.8em;
+  color:#eee;
+}
+
+th {
+  font-weight:400;
+  
+  background-color:#666
+}
+
+table, th, td {
+  border:1px solid #666;
+  border-width:1px 0;
+}
+
+th, td {
+  padding:0.5em 1em;
+}
+
+td {
+  color:#aaa;
+  background-color:#333
+}
+
+tr.alt td {
+  background-color:#444
 }
 
 /*******************
@@ -494,112 +526,6 @@ ul#sponsorships .aside {
   background-color:#fff;
   border-radius:5px;
 }
-
-/*
-  #we-title {
-  padding-top:70px;
-  height:0;
-  background:url('/images/whatwedo.png') center no-repeat;
-  overflow:hidden;
-}
-
-#we-menu {
-  margin:auto;
-  width:800px;
-  height:500px;
-  background:url('/images/we.png');
-}
-
-#we-menu li {
-  display:inline;
-  width:200px;
-  height:0;
-  cursor:pointer;
-  float:left;
-  padding-top:500px;
-  overflow:hidden;
-}
-
-#we-menu li:hover { background:url('/images/we-over.png') }
-#we-menu li#link-code:hover { background-position:-200px 0; }
-#we-menu li#link-play:hover { background-position:-400px 0; }
-#we-menu li#link-write:hover { background-position:-600px 0; }
-
-#we-mask {
-  display:none;
-  position:absolute;
-  top:0;/*70px;
-  left:80px;
-  width:800px;
-  height:500px;
-  background:#000;
-  opacity:0.8;
-  filter:alpha(opacity=0.8);
-}
-
-#we-work, #we-code, #we-play, #we-write {
-  position:absolute;
-  top:0;/*70px;
-  left:80px;
-  color:#ddd;
-  width:800px;
-  height:500px;
-}
-
-.section h2 {
-  border-top:none;
-  margin:0;
-  padding:0.5em 0 0.3em;
-  border-bottom:1px solid #900;
-}
-
-.section .we-back {
-  background:url('/images/we-back.png') no-repeat;
-  position:absolute;
-  right:10px;
-  top:20px;
-  width:30px; height:0;
-  margin:0 10px 10px;
-  padding-top:30px;
-  overflow:hidden;
-  cursor:pointer;
-}
-
-.section .we-back:hover {
-  background-position:-30px 0;
-}
-
-.section .image {
-  position:absolute;
-  float:left;
-  width:200px; height:500px;
-  background:url('/images/we.png');
-}
-
-#we-work .image { background-position:0 -500px; }
-#we-code .image { left:200px; background-position:-200px -500px; }
-#we-play .image { left:400px; background-position:-400px -500px; }
-#we-write .image { left:600px; background-position:-600px -500px; }
-
-.section .article {
-  position:absolute;
-  width:360px;
-  font-size:0.7em;
-  padding:20px;
-}
-#we-work .article, #we-write .article { left:200px; }
-#we-code .article { left:400px; }
-
-.section .article p { font-size:1em; }
-
-.section .aside {
-  position:absolute;
-  width:160px;
-  height:440px;
-  padding:30px 20px;
-}
-#we-work .aside, #we-play .aside { left:600px; }
-*/
 
 /***************
  * HOMEPAGE CSS

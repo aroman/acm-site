@@ -4,7 +4,8 @@
 $(document).ready(function() {
   
   /* auth module */
-  
+  $('table tr:even').addClass('alt');
+
   /* generate links */
   if ($('#auth').attr('class') == 'form') {
     $('#auth').hide();
