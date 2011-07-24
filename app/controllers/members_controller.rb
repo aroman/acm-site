@@ -1,6 +1,6 @@
 class MembersController < ApplicationController
  
-  authorize_resource :member
+  load_and_authorize_resource :member
   before_filter :login_required, :except => [:new, :create]
   
   def index
