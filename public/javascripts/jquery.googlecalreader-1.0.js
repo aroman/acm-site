@@ -8,11 +8,7 @@
 */
 
 (function ($) {
-    //Add gcal element
-    $(document).ready(function () {
-        $('body').prepend('<div id="gcal">Loading...</div>');
-    });
-
+    
     //Resize image on ready or resize
     $.gCalReader = function (options) {
         //Default settings
@@ -43,11 +39,12 @@
             var callback = function (result) {
 
                 var entries = result.feed.getEntries();
-                $('#gcal').html('');
+                $('#events').html('');
+                /*
                 if (options.displayCount) {
-                    $('#gcal').html(entries.length + ' upcoming events');
-                }
-                $('#gcal').append('<ul id="eventlist"></ul>');
+                    $('#events').html(entries.length + ' upcoming events');
+                }*/
+                $('#events').append('<ul id="eventlist"></ul>');
 
                 for (var i = 0; i < entries.length; i++) {
                     var eventEntry = entries[i];
@@ -98,14 +95,15 @@
                     var location = eventEntry.getLocations();
                     var eventWhere = location[0].getValueString();
 
-                    var eventhtml = '<div id="eventtitle">' + eventTitle + '</div>  When: ' + dayname + ' ' + monthname + ' ' + date + ', ' + time + '<br>Where: ' + eventWhere + '<br>' + eventContent;
+                    var eventhtml = '<a href="#"><span class="date">'+monthname+' '+date+'</span> '+eventTitle+'</a>';
+                    //'<div id="eventtitle">' + eventTitle + '</div>  When: ' + dayname + ' ' + monthname + ' ' + date + ', ' + time + '<br>Where: ' + eventWhere + '<br>' + eventContent;
                     $('#eventlist').append('<li>' + eventhtml + '</li>');
                 }
             };
 
             // Error handler to be invoked when getEventsFeed() produces an error
             var handleError = function (error) {
-                $('#gcal').html('<pre>' + error + '</pre>');
+                $('#events').html('<pre>' + error + '</pre>');
             };
 
             // Submit the request using the calendar service object
