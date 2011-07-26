@@ -601,7 +601,6 @@ ul#events li a:hover {
   text-decoration:none;
   background-color:#eee;
   border-left:5px solid #900;
-  position:relative;
   left:-11px;
   color:#0182ac;
 }
@@ -609,5 +608,19 @@ ul#events li a:hover {
 ul#events li a .date { 
   color:#900;
   margin-right:3px; 
+}
+
+ul#events li #load-placeholder {
+  display:block;
+  padding:16px 0;
+  position:relative;
+}
+
+ul#events li #load-placeholder:after {
+  content:"";
+  background-image:url('/images/ajax-loader.gif');
+  width:16px; height:16px;
+  position:absolute;
+  left:7em;
 }
 
