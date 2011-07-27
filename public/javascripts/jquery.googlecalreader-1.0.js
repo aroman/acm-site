@@ -52,7 +52,7 @@
                     var startDateTime = null;
                     var eventDate = null;
                     var eventWhere = null;
-                    var eventContent = eventEntry.getContent().getText();
+                    var eventContent = ("" == eventEntry.getContent().getText()) ? 'N/A' : eventEntry.getContent().getText();
 
                     var times = eventEntry.getTimes();
                     if (times.length > 0) {
@@ -93,9 +93,9 @@
                     var dayname = d_names[day];
                     var monthname = m_names[month];
                     var location = eventEntry.getLocations();
-                    var eventWhere = location[0].getValueString();
-
-                    var eventhtml = '<a href="#"><span class="date">'+monthname+' '+date+'</span> '+eventTitle+'</a>';
+                    var eventWhere = ("" == location[0].getValueString()) ? 'N/A' : location[0].getValueString();
+                    
+                    var eventhtml = '<a href="#" title="' + dayname + ' ' + monthname + ' ' + date + ', ' + time + '\nWhere: ' + eventWhere + '\nDescription: ' + eventContent + '"><span class="date">' + monthname + ' ' + date + '</span> ' + eventTitle + '</a>';
                     //'<div id="eventtitle">' + eventTitle + '</div>  When: ' + dayname + ' ' + monthname + ' ' + date + ', ' + time + '<br>Where: ' + eventWhere + '<br>' + eventContent;
                     $('#eventlist').append('<li>' + eventhtml + '</li>');
                 }
