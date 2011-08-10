@@ -5,5 +5,9 @@ class ApplicationController < ActionController::Base
   def current_ability
     @current_ability ||= Ability.new(current_member)
   end
- 
+
+  rescue_from CanCan::AccessDenied do |exception|
+    flash[:error] = "You do not have the necessary ninja skillz to access that page O_o"
+    redirect_to root_url
+  end
 end
