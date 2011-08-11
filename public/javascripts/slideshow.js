@@ -43,7 +43,7 @@ $(document).ready(function() {
       currentSlide = newSlide;
     refreshSlideshow(speed);
   });
-
+  var init = true;
   $(window).hashchange();
 
   /* .control click event listener */
@@ -60,7 +60,13 @@ $(document).ready(function() {
   
   function refreshSlideshow(speed) {
     var newHeight = slides.eq(currentSlide).height() + 30;
-    $('.slideshow').stop().animate({ height: newHeight }, speed);
+    
+    if (init) {
+      $('.slideshow').stop().height(newHeight);
+    } else {
+      init = false;
+      $('.slideshow').stop().animate({ height: newHeight }, speed);
+    }
     $('.slideshow .slideContainer').stop()
       .animate({ left: currentSlide * -slideWidth}, speed);
 

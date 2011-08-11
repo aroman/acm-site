@@ -7,7 +7,7 @@ class ApplicationController < ActionController::Base
   end
 
   rescue_from CanCan::AccessDenied do |exception|
-    flash[:error] = "You do not have the necessary ninja skillz to access that page O_o"
+    flash[:error] = "You do not have the necessary ninja skills to access that page. Train harder, maybe."
     redirect_to root_url
   end
 end

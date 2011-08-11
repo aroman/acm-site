@@ -611,6 +611,7 @@ ul#events li a .date {
 
 ul#events li #load-placeholder {
   display:block;
+  left:25px;
   padding:16px 0;
   position:relative;
 }
@@ -620,6 +621,6 @@ ul#events li #load-placeholder:after {
   background-image:url('/images/ajax-loader.gif');
   width:16px; height:16px;
   position:absolute;
-  left:7em;
+  left:-25px;
 }
 
