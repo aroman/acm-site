@@ -95,7 +95,7 @@
                     var location = eventEntry.getLocations();
                     var eventWhere = ("" == location[0].getValueString()) ? 'N/A' : location[0].getValueString();
                     
-                    var eventhtml = '<a href="#" title=" ' + dayname + ' ' + monthname + ' ' + date + ', ' + time + '\n Where: ' + eventWhere + '\n Description: ' + eventContent + '"><span class="date">' + monthname + ' ' + date + '</span> ' + eventTitle + '</a>';
+                    var eventhtml = '<a href="#" title=" ' + dayname + ' ' + monthname + ' ' + date + ', ' + time + '\n Where: ' + eventWhere + '\n Description: ' + eventContent + '"><span class="date">' + (month+1) + '/' + date + '</span> ' + eventTitle + '</a>';
                     //'<div id="eventtitle">' + eventTitle + '</div>  When: ' + dayname + ' ' + monthname + ' ' + date + ', ' + time + '<br>Where: ' + eventWhere + '<br>' + eventContent;
                     $('#eventlist').append('<li>' + eventhtml + '</li>');
                 }

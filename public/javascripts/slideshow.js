@@ -62,9 +62,9 @@ $(document).ready(function() {
     var newHeight = slides.eq(currentSlide).height() + 30;
     
     if (init) {
+      init = false;
       $('.slideshow').stop().height(newHeight);
     } else {
-      init = false;
       $('.slideshow').stop().animate({ height: newHeight }, speed);
     }
     $('.slideshow .slideContainer').stop()

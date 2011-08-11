@@ -588,6 +588,7 @@ ul#events li { border-bottom:1px solid #aaa }
 
 ul#events li a {
   color:#222;
+  font-size:0.9em;
   display:block;
   padding:6px;
   width:100%;
