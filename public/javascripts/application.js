@@ -6,7 +6,7 @@ $(document).ready(function() {
   /* auth module */
   $('table tr:even').addClass('alt');
 
-  /* generate links */
+  /* generate links 
   if ($('#auth').attr('class') == 'form') {
     $('#auth').hide();
     $('#auth .container')
@@ -14,6 +14,7 @@ $(document).ready(function() {
     $('#header .container')
       .prepend('<span id="l-open">open</span>');
   }
+  */
 
   $("#l-open").click(function() {
     $("#l-open").slideUp(200);

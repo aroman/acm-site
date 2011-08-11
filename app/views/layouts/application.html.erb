@@ -23,6 +23,17 @@
 <%= render(:partial => 'partials/navigation') %>
   </div>
 </div>
+<script type="text/javascript">
+
+  if ($('#auth').attr('class') == 'form') {
+    $('#auth').hide();
+    $('#auth .container')
+      .append('<span id="l-close">close</span>');
+    $('#header .container')
+      .prepend('<span id="l-open">open</span>');
+  }
+
+</script>
 <div id="main"> 
     <%= content_tag(:h1, @title) if show_title? %>
     <%= yield %>
