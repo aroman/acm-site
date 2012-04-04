@@ -625,3 +625,6 @@ ul#events li #load-placeholder:after {
   left:-25px;
 }
 
+#compOfWeek {
+  margin-top: 30px;
+}
