@@ -429,26 +429,18 @@ dl#board .profile p {
  ***********************
  */
 
-/*
-ul#sponsorships li {
-  display:inline;
-  float:left;
+ul.sponsorships{
+  list-style:dotted; 
+  display:inline-block;
+}
+
+
+ul.sponsorships li {
+  position: static;
   padding:0 10px;
-  width:300px;
-  font-size:0.7em;
 }
 
-ul#sponsorships li h3, ul#sponsorships li p {
-  float:none;
-  width:100%;
-}
 
-ul#sponsorships .aside {
-  display:block;
-  width:100%;
-  float:none;
-}
-*/
 
 /***********************
  * Activities Page CSS
