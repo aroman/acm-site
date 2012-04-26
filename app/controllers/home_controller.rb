@@ -15,8 +15,8 @@ class HomeController < ApplicationController
     @title = "Join"
   end
 
-  def sponsor
-    @title = "Sponsor"
+  def sponsors
+    @title = "Sponsors"
   end
 end
 
