@@ -1,16 +1,17 @@
-<% 
-nav_links = %w( home activities join sponsors about )
-nav_paths = { 
+<%
+nav_links = %w( home activities join sponsors about shirts)
+nav_paths = {
   'home' => home_path,
   'about' => about_path,
   'activities' => we_path,
   'join' => join_path,
-  'sponsors' => sponsors_path
+  'sponsors' => sponsors_path,
+  'shirts' => shirts_path
 }
-%>    
+%>
     <ul id = "nav">
 <% nav_links.each do |link| %>
-      <%= content_tag(:li, link_to(link, nav_paths[link]), :id => link, 
+      <%= content_tag(:li, link_to(link, nav_paths[link]), :id => link,
                       :class => (@title.downcase == link)? 'current' : '') %>
 <% end %>
     </ul>
