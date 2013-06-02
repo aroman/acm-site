@@ -10,4 +10,5 @@ class ApplicationController < ActionController::Base
     flash[:error] = "You do not have the necessary ninja skills to access that page. Train harder, maybe."
     redirect_to root_url
   end
+
 end
