@@ -1,0 +1,45 @@
+<div class="headline">
+  <div class="container">
+  <h1>T-Shirt Design Challenge!</h1>
+  <p>
+  <img src="/images/light.png" alt="Sponsor acm@cmu!" />
+  Got a creative idea or a killer one-liner? Join us in designing ACM’s T-Shirt and see your work walk around campus all semester! 
+  </p>
+  </div>
+</div>
+<div class="content container">
+<!--<h2>Discover Diverse Talent</h2>-->
+<div class="aside">
+You can influence the attire of literally <i>dozens</i> of students!
+</div>
+<p>
+Welcome to the ACM@CMU T-Shirt Design Challenge! Here’s how to get started!
+</p>
+<p>
+<u>Instructions</u>
+</p>
+<p>
+Simply! Just fill out our form at <a href="http://goo.gl/6xCTn"> http://goo.gl/6xCTn </a>
+</p>
+<p>
+We look forward to see your awesome designs on our shirts for the years to come!
+</p>
+<p>
+<u>Prizes</u>
+</p>
+<p style="background-image:url('http://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/RaspberryPi.jpg/300px-RaspberryPi.jpg'); height:100px; background-repeat:no-repeat; background-position:top;">
+</p>
+<p>1. A Raspberry Pi <http://www.raspberrypi.org/faqs>, complete with a case, 4gig SD Card, and wall adapter</p>
+<p>2. You will also get a T-Shirt of course! &#9786;</p>
+<p>
+<u>Rules/Requirements</u>
+</p>
+<p>
+1. Use of <a href='<%= url_for("images/title.png") %>'>ACM Logo (Click here to download)</a> in the design </p>
+<p>
+2. No profanity or offensive material/messages
+</p>
+<p>
+3. For any additional information, queries or help, please contact <a href="mailto:acm.tshirts@gmail.com">acm.tshirts@gmail.com</a>
+</p>
+</div>
