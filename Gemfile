@@ -12,3 +12,4 @@ gem "bcrypt-ruby", :require => "bcrypt"
 gem 'cancan'
 
 gem "jquery-rails"
+gem 'unicorn'
