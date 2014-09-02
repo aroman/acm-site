@@ -18,5 +18,6 @@ class HomeController < ApplicationController
   def sponsors
     @title = "Sponsors"
   end
+
 end
 

@@ -25,6 +25,7 @@ Acm::Application.routes.draw do
   match 'join' => 'home#join', :as => :join
   match 'sponsors' => 'home#sponsors', :as => :sponsors
   match 'shirts' => 'home#shirt', :as => :shirts
+  match 'subscribe' => 'home#subscribe', :as => :subscribe
 
 #  match 'contact' => 'home#contact', :as => :contact
 #  match 'board' => 'home#board', :as => :board
