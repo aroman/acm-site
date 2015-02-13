@@ -1,3 +1,4 @@
+//modified from original https://github.com/bradoyler/GoogleCalReader-jquery-plugin/blob/caa21d6943d66dff4b5c2a780836536790c56d2d/index.js
 (function($) {
 
   $.fn.gCalReader = function(options) {
@@ -26,6 +27,8 @@
       url: feedUrl,
       dataType: 'json',
       success: function(data) {
+        if (defaults.onload) defaults.onload();
+
         if(defaults.sortDescending){
           data.items = data.items.reverse();
         }
@@ -49,6 +52,8 @@
         });
       },
       error: function(xhr, status) {
+        if (defaults.onload) defaults.onload();
+
         $($div).append('<p>' + status +' : '+ defaults.errorMsg +'</p>');
       }
     });
