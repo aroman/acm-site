@@ -40,15 +40,22 @@
 					var description = item.description;
 					var location = item.location;
 					var eventDate = formatDate(eventdate, defaults.dateFormat.trim());
-					s ='<div class="eventtitle">'+ summary +'</div>';
-					s +='<div class="eventdate"> When: '+ eventDate +'</div>';
+                    //<li><a href="#"><span class="date">06/04</span> This is Your Next Event</a></li>
+					//s ='<div class="eventtitle">'+ summary +'</div>';
+					//s +='<div class="eventdate"> When: '+ eventDate +'</div>';
+                    //
+                    s = '<li><a href="#"><span class="date">' + date + '</span>'
+                    var $newEl = $('<li><a href="#"><span class="date"></span><span class="text"></span></a></li>');
+                    $newEl.find('span.date').text(eventDate);
+                    $newEl.find('span.text').text(description);
+                    /*
 					if(location) {
 						s +='<div class="location">Where: '+ location +'</div>';
 					}
 					if(description) {
 						s +='<div class="description">'+ description +'</div>';
-					}
-					$($div).append('<li>' + s + '</li>');
+					}*/
+                    $div.append($newEl);
         });
       },
       error: function(xhr, status) {
