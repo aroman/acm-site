@@ -34,26 +34,14 @@
         data.items = data.items.slice(0, defaults.maxEvents);
 
         $.each(data.items, function(e, item) {
+          // heavily modified by ksikka
           var eventdate = item.start.dateTime || item.start.date ||'';
           var summary = item.summary || '';
-					var description = item.description;
-					var location = item.location;
-					var eventDate = formatDate(eventdate, defaults.dateFormat.trim());
-                    //<li><a href="#"><span class="date">06/04</span> This is Your Next Event</a></li>
-					//s ='<div class="eventtitle">'+ summary +'</div>';
-					//s +='<div class="eventdate"> When: '+ eventDate +'</div>';
-                    //
-                    var $newEl = $('<li><a href="#"><span class="date"></span><span class="text"></span></a></li>');
-                    $newEl.find('span.date').text(eventDate);
-                    $newEl.find('span.text').text(description);
-                    /*
-					if(location) {
-						s +='<div class="location">Where: '+ location +'</div>';
-					}
-					if(description) {
-						s +='<div class="description">'+ description +'</div>';
-					}*/
-                    $div.append($newEl);
+          var eventDate = formatDate(eventdate, defaults.dateFormat.trim());
+          var $newEl = $('<li><a href="#"><span class="date"></span><span class="text"></span></a></li>');
+          $newEl.find('span.date').text(eventDate);
+          $newEl.find('span.text').text(summary);
+          $div.append($newEl);
         });
       },
       error: function(xhr, status) {
@@ -118,6 +106,9 @@
       switch (strFormat) {
         case 'ShortTime':
           fd = time;
+          break;
+        case 'customksikka':
+          fd = month + '/' + dayNum;
           break;
         case 'ShortDate':
           fd = month + '/' + dayNum + '/' + year;
