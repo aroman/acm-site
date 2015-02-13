@@ -40,12 +40,12 @@ ACM@CMU is Carnegie Mellon University's student chapter of the Association for C
 <script type="text/javascript">
   google.load("gdata", "1.x", { packages: ["calendar"] });
 </script> 
-<script src="/javascripts/jquery.googlecalreader-1.0.js" type="text/javascript"></script>
+<script src="/javascripts/jquery.googlecalreader-1.1.js" type="text/javascript"></script>
 <script type="text/javascript">
 $(document).ready(function() {
-  $.gCalReader({
-    feedUri:'https://www.google.com/calendar/feeds/4k7vn521n3ok8vrb8k8niegohk%40group.calendar.google.com/public/basic',
-    maxresults:5
-  });
+  <!-- setup by ksikka -->
+  var calendarId = '4k7vn521n3ok8vrb8k8niegohk@group.calendar.google.com';
+  var apiKey = 'AIzaSyBNhLCvEqazinVhvAvFAOWBcOd9grUOeG8';
+  $('#events').gCalReader({ calendarId:calendarId, apiKey:apiKey});
 });
 </script>
