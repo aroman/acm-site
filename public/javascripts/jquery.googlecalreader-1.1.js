@@ -15,7 +15,6 @@
       },
       options);
 
-    var s = '';
     var feedUrl = 'https://www.googleapis.com/calendar/v3/calendars/' +
       encodeURIComponent(defaults.calendarId.trim()) +'/events?key=' + defaults.apiKey +
       '&orderBy=startTime&singleEvents=true';
@@ -44,7 +43,6 @@
 					//s ='<div class="eventtitle">'+ summary +'</div>';
 					//s +='<div class="eventdate"> When: '+ eventDate +'</div>';
                     //
-                    s = '<li><a href="#"><span class="date">' + date + '</span>'
                     var $newEl = $('<li><a href="#"><span class="date"></span><span class="text"></span></a></li>');
                     $newEl.find('span.date').text(eventDate);
                     $newEl.find('span.text').text(description);
