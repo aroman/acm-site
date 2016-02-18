@@ -620,10 +620,4 @@ ul#events li #load-placeholder:after {
 #compOfWeek {
   max-width:258px;
   max-height:130px;
-  position:absolute;
-  margin:auto;
-  top:0;
-  left:0;
-  right:0;
-  bottom:0;
 }

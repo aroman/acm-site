@@ -6,7 +6,7 @@
 <h2>Company of the Week</h2>
 <!--<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisis semper convallis. Praesent fermentum euismod aliquet. Etiam cursus dolor non lacus vestibulum condimentum sed ut neque. Ut tincidunt, odio et egestas varius, ligula velit consequat ipsum, vel hendrerit sapien purus non nibh.</p>
 -->
-<p style="position:relative;">
+<p>
 <% scale = 80 %>
 <% #link_to image_tag("Intel-logo.jpg", :height => "#{1.5*scale}%", :width => "#{scale}%"), "http://www.intel.com"%>
 
@@ -61,7 +61,6 @@
             "https://www.heroku.com/"] %>
 
 <!-- Cycles through sponsors of the week -->
-<!-- TODO: Let bigger images get larger height -->
 <% time = Time.now.to_i %>
 <% seconds_in_week = 60 * 60 * 24 * 7 %>
 <% sponsor_count = images.length %>
