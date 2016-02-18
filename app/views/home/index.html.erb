@@ -6,14 +6,69 @@
 <h2>Company of the Week</h2>
 <!--<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisis semper convallis. Praesent fermentum euismod aliquet. Etiam cursus dolor non lacus vestibulum condimentum sed ut neque. Ut tincidunt, odio et egestas varius, ligula velit consequat ipsum, vel hendrerit sapien purus non nibh.</p>
 -->
-<p>
+<p style="position:relative;">
 <% scale = 80 %>
 <% #link_to image_tag("Intel-logo.jpg", :height => "#{1.5*scale}%", :width => "#{scale}%"), "http://www.intel.com"%>
 
-<%= link_to image_tag("sponsors/logo_epic.png", :id => "compOfWeek"), "http://www.epic.com" %>
+<!-- Just update this every time a sponsor is added -->
+<% images = ["sponsors/logo_apt.jpg",
+             "sponsors/logo_asana.png",
+             "sponsors/logo_bloom.jpg",
+             "sponsors/logo_epic.png",
+             "sponsors/logo_fs.png",
+             "sponsors/logo_g.png",
+             "sponsors/logo_gc.png",
+             "sponsors/logo_gm.png",
+             "sponsors/logo_harris.png",
+             "sponsors/logo_hp.jpg",
+             "sponsors/logo_ibm.jpg",
+             "sponsors/logo_imc.jpg",
+             "sponsors/logo_janest.jpg",
+             "sponsors/logo_l126.png",
+             "sponsors/logo_lm.png",
+             "sponsors/logo_ms.jpeg",
+             "sponsors/logo_ng.jpg",
+             "sponsors/logo_p.jpg",
+             "sponsors/logo_quora.png",
+             "sponsors/logo_sf.png",
+             "sponsors/logo_up.png",
+             "sponsors/logo_vertica.jpg",
+             "sponsors/logo_visa.jpg",
+             "sponsors/logo_wh.jpg"] %>
+<% links = ["http://www.predictivetechnologies.com",
+            "https://www.asana.com/",
+            "http://www.bloomberg.com/",
+            "http://www.epic.com/",
+            "https://www.foursquare.com/",
+            "https://www.google.com/",
+            "https://www.kcg.com/",
+            "http://www.gm.com/index.html",
+            "http://www.harris.com/",
+            "http://www.hp.com/",
+            "http://www.ibm.com/us-en/",
+            "http://www.imc.nl/",
+            "https://www.janestreet.com/",
+            "http://www.lab126.com/",
+            "http://www.lockheedmartin.com/",
+            "https://www.microsoft.com/en-us/",
+            "http://www.northropgrumman.com/Pages/default.aspx",
+            "https://www.palantir.com/",
+            "https://www.quora.com/",
+            "http://www.salesforce.com/",
+            "http://www.up.com/",
+            "https://www.vertica.com/",
+            "https://usa.visa.com/",
+            "https://www.heroku.com/"] %>
 
+<!-- Cycles through sponsors of the week -->
+<!-- TODO: Let bigger images get larger height -->
+<% time = Time.now.to_i %>
+<% seconds_in_week = 60 * 60 * 24 * 7 %>
+<% sponsor_count = images.length %>
 
-
+<% idx = (time / seconds_in_week) % sponsor_count %>
+<%= link_to image_tag(images[idx], :id => "compOfWeek"), links[idx] %>
+<!--%= link_to image_tag("sponsors/logo_epic.png", :id => "compOfWeek"), "http://www.epic.com" %-->
 </p>
 </div>
 <div>
