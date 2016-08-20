@@ -64,7 +64,7 @@ ul#nav {
   padding:20px 0 0;
   height:20px;
 }
- 
+
 ul#nav li {
   display:inline;
   width:20px;
@@ -226,7 +226,7 @@ form input[type="submit"]:hover {
   width:60%;
 }
 
-#main form.login input[type="text"], 
+#main form.login input[type="text"],
 #main form.login input[type="password"] {
   width:50%;
 }
@@ -287,10 +287,10 @@ form input[type="submit"]:hover {
 
 #logo { display:inline; text-align:center; }
 #title { margin-top:40px }
-#tagline { 
+#tagline {
   position:relative;
   top:-0.5em; left:5em;
-  font-family:Georgia, serif; 
+  font-family:Georgia, serif;
   font-style:italic;
   font-size:0.7em;
   text-shadow: 0 1px 0 rgb(255,255,255);
@@ -332,7 +332,7 @@ form input[type="submit"]:hover {
   border-top:10px solid #900;
 }
 
-#footer .container { 
+#footer .container {
   background:url('/images/dip.gif') top center no-repeat;
   height:50px;
   padding:10px;
@@ -341,6 +341,13 @@ form input[type="submit"]:hover {
 #footer img {
   float:left;
   margin-right:10px;
+  height:40px;
+}
+
+#footer img[src^='/images/cmu-color.png'] {
+  height:25px;
+  margin-top:7.5px;
+  margin-left:5px;
 }
 
 #footer #copyright {
@@ -430,7 +437,7 @@ dl#board .profile p {
  */
 
 ul.sponsorships{
-  list-style:dotted; 
+  list-style:dotted;
   display:inline-block;
 }
 
@@ -467,7 +474,7 @@ ul.sponsorships li {
   overflow:hidden;
 }
 
-.slideshow .slideContainer { 
+.slideshow .slideContainer {
   position:relative;
 }
 
@@ -487,7 +494,7 @@ ul.sponsorships li {
   opacity:0.8;
   filter:alpha(opacity=80);
 }
-  
+
 .slideshow .control:hover {
   opacity:1.0;
   filter:alpha(opacity=100);
@@ -497,7 +504,7 @@ ul.sponsorships li {
   background:transparent url('/images/right.png') center no-repeat;
   right:0;
 }
-.slideshow .control.last { 
+.slideshow .control.last {
   background:transparent url('/images/left.png') center no-repeat;
   left:0;
 }
@@ -506,7 +513,7 @@ ul.sponsorships li {
   position:absolute; bottom:0;
   margin:0 auto;
 }
-  
+
 .slideshow .slideLinks .control {
   cursor:pointer;
   position:relative;
@@ -525,7 +532,7 @@ ul.sponsorships li {
  ***************
  */
 
-h1.home { 
+h1.home {
   text-align:center;
 }
 
@@ -541,7 +548,7 @@ h1.home {
 
 #main .home div:last-child { margin:0; }
 
-.home div h2 { 
+.home div h2 {
   margin:0; padding:0 30px;
   color:#fff;
   font-family:'Open Sans', Aller, Helvetica, Arial, sans-serif;
@@ -550,7 +557,7 @@ h1.home {
   line-height:2em;
   height:30px;
   border-top:none;
-  border-right:1px solid #000; 
+  border-right:1px solid #000;
 }
 
 .home div:first-child h2 {
@@ -597,9 +604,9 @@ ul#events li a:hover {
   color:#0182ac;
 }
 
-ul#events li a .date { 
+ul#events li a .date {
   color:#900;
-  margin-right:3px; 
+  margin-right:3px;
 }
 
 ul#events li #load-placeholder {

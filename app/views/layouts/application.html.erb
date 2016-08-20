@@ -39,13 +39,12 @@
   }
 
 </script>
-<div id="main"> 
+<div id="main">
     <%= content_tag(:h1, @title) if show_title? %>
     <%= yield %>
 </div>
 <div id="footer">
   <div class="container">
-    <%= image_tag("html5-color.png", :alt => 'HTML5+CSS3') %>
     <%= link_to(image_tag("acm-color.png", :alt => 'Association for Computing Machinery'), 'http://www.acm.org/') %>
     <%= link_to(image_tag("cmu-color.png", :alt => 'Carnegie Mellon University'), 'http://www.cmu.edu/') %>
     <span id="copyright">
