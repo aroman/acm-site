@@ -71,9 +71,9 @@ ul#nav li {
 }
 
 ul#nav li a {
-  padding:4px 8px;
-  margin:6px;
-  font-size:0.8em;
+  padding: 4px 8px;
+  margin: 2px;
+  font-size: 0.96em;
   color:#000;
   text-shadow: 0 1px 0 rgb(255,255,255);
 }
@@ -116,6 +116,9 @@ ul#nav li.current a, ul#nav li a:hover {
 
 .headline h1 img {
   float:none;
+  height: 200px;
+  margin-top: -10px;
+  margin-bottom: 20px;
 }
 
 .content .aside {
@@ -355,7 +358,7 @@ form input[type="submit"]:hover {
   padding:15px 0;
   float:right;
   font-family:Georgia, serif;
-  font-size:0.7em;
+  font-size: 0.8em;
   text-shadow: 0 1px 0 rgb(255,255,255);
 }
 
@@ -553,11 +556,11 @@ h1.home {
   color:#fff;
   font-family:'Open Sans', Aller, Helvetica, Arial, sans-serif;
   font-style:normal;
-  font-size:0.8em;
-  line-height:2em;
   height:30px;
   border-top:none;
   border-right:1px solid #000;
+  line-height: 22px;
+  font-size: 16px;
 }
 
 .home div:first-child h2 {
@@ -566,13 +569,15 @@ h1.home {
 .home div p {
   height:150px;
   overflow:auto;
-  font-size:0.7em;
   font-weight:400;
   padding:20px 30px 0;
   border-right:1px solid #900;
+  font-size: 0.8em;
+  line-height: 1.8em;
 }
 .home div:first-child p {
   border-left:1px solid #900;
+  text-align: center;
 }
 
 ul#events {
